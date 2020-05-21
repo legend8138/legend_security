@@ -323,7 +323,7 @@ bot.on("channelCreate", async channel => {
         .ban()
         .catch(e =>
           channel.guild.owner.send(
-            `**⇏ | ${entry.username} ژوڕی زۆڕی سڕی وەتەوە **`
+            `**⇏ | ${entry.username} ژوڕی زۆڕی دروست کردوە **`
           )
         );
       anti[channel.guild.id + entry.id].actions = "0";
