@@ -57,37 +57,6 @@ function t_c() {
 }
 setInterval(t_c, 60000);
  
-reaction5.on("collect", r => {
-  const embed = new Discord.RichEmbed()
-      .setColor("#000000")
-      .setDescription(*
-        Protection Commands - کۆدی پارێزگاری : __
-
-> 〔 -antibots on 〕⇰ 『 هیچ بۆت ئەک ناتوانی بێتە ناو سێرڤەر』
-
-> 〔 -antibots off 〕⇰ 『بۆت دەتوانی بێنیە ناو سێرڤەر 』
-
-> 〔 -settings limitsban 〕⇰ 『  نەفەر باند بکەی خۆت باندەبی 』
-
-> 〔 -settings limitskick 〕⇰ 『 نەفەر کیک بکەی خۆت کیکدەبی 』
-
-> 〔 -settings limitsroleC 〕⇰ 『 رۆل دروست بکەی 』
-
-> 〔 -settings limitsroleD 〕⇰ 『 رۆڵ رەش بکەیەوە  』
-
-> 〔 -settings limitschannelD 〕⇰ 『چەناڵ رەشکەیەوەبانددەبی  』
-
-> 〔 -settings limitstime 〕⇰ 『 ئه وكه سانه ى كه نه فه ر باند ده كه ن روليان ليده ستيندريته وه』
-**
-
-> __By ==> [ᵈᵉᵛPANDA]__
-)
-   message.author.sendEmbed(embed)
-})
-    })
-}
-});
-
 bot.on("ready", () => {
   console.log(
   );
