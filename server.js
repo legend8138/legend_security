@@ -56,7 +56,8 @@ function t_c() {
   });
 }
 setInterval(t_c, 60000);
- 
+
+
 bot.on("ready", () => {
   console.log(
   );
