@@ -690,7 +690,7 @@ bot.on('message', message => {
       antibots[message.guild.id] = {
 onoff: 'On',
 }
-message.channel.send(`**✅ The AntiBots Is __𝐎𝐍__ !**`)
+message.channel.send(`**‎✅ **__بە سەرکەوتوانە ئێستا بۆت ناتوانێ جۆین سێرڤەر بێت__`)
           fs.writeFile("./antibot.json", JSON.stringify(antibots), (err) => {
             if (err) console.error(err)
             .catch(err => {
@@ -710,7 +710,7 @@ bot.on('message', message => {
 antibots[message.guild.id] = {
 onoff: 'Off',
 }
-message.channel.send(`**⛔ The AntiBots Is __𝐎𝐅𝐅__ !**`)
+message.channel.send(`**✅ __بە سەرکەوتوانە ئێستا بۆت دەتوانی جۆین ی سێرڤەر بکات__**`)
           fs.writeFile("./antibot.json", JSON.stringify(antibots), (err) => {
             if (err) console.error(err)
             .catch(err => {
