@@ -685,7 +685,7 @@ bot.on("guildMemberRemove", async member => {
 let antibots = JSON.parse(fs.readFileSync('./antibot.json' , 'utf8'));//require antihack.json file
 bot.on('message', message => {
   
-    if(message.content.startsWith(prefix + "antibot on")) {
+    if(message.content.startsWith(prefix + "antibots on")) {
        if(!message.member.hasPermission('Ownership')) return message.reply(':');
       antibots[message.guild.id] = {
 onoff: 'On',
@@ -705,7 +705,7 @@ message.channel.send(`**‎✅ **__بە سەرکەوتوانە ئێستا بۆت
 
 
 bot.on('message', message => {
-    if(message.content.startsWith(prefix + "antibot off")) {      
+    if(message.content.startsWith(prefix + "antibots off")) {      
       if(!message.member.hasPermission('Ownership')) return message.reply('');
 antibots[message.guild.id] = {
 onoff: 'Off',
