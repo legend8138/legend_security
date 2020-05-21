@@ -25,7 +25,7 @@ bot.on("ready", () => console.log("🤖Ready Bot In Online🤖"));
 
 bot.on('message', msg => {
   if (msg.content === 'Hi') {
-    msg.reply('Hi Guys');
+    msg.reply('Hi gays');
     
     
   }
@@ -241,7 +241,7 @@ bot.on("channelDelete", async channel => {
     anti[channel.guild.id + entry.id].actions = Math.floor(
       anti[channel.guild.id + entry.id].actions + 1
     );
-    console.log("TETS");
+    console.log("log");
     setTimeout(() => {
       anti[channel.guild.id + entry.id].actions = "0";
     }, config[channel.guild.id].time * 1000);
@@ -311,7 +311,7 @@ bot.on("channelCreate", async channel => {
     anti[channel.guild.id + entry.id].actions = Math.floor(
       anti[channel.guild.id + entry.id].actions + 1
     );
-    console.log("TETS");
+    console.log("log");
     setTimeout(() => {
       anti[channel.guild.id + entry.id].actions = "0";
     }, config[channel.guild.id].time * 1000);
@@ -379,7 +379,7 @@ bot.on("roleDelete", async channel => {
     anti[channel.guild.id + entry.id].actions = Math.floor(
       anti[channel.guild.id + entry.id].actions + 1
     );
-    console.log("TETS");
+    console.log("log");
     setTimeout(() => {
       anti[channel.guild.id + entry.id].actions = "0";
     }, config[channel.guild.id].time * 1000);
@@ -574,7 +574,7 @@ bot.on("guildKickAdd", async (guild, user) => {
     anti[guild.id + entry.id].actions = Math.floor(
       anti[guild.id + entry.id].actions + 1
     );
-    console.log("TETS");
+    console.log("log");
     setTimeout(() => {
       anti[guild.id + entry.id].actions = 0;
     }, config[guild.id].time * 1000);
@@ -639,7 +639,7 @@ bot.on("guildMemberRemove", async member => {
       anti[member.guild.id + entry.id].actions = Math.floor(
         anti[member.guild.id + entry.id].actions + 1
       );
-      console.log("TETS");
+      console.log("log");
       setTimeout(() => {
         anti[member.guild.id + entry.id].actions = 0;
       }, config[member.guild.id].time * 1000 || 30000);
