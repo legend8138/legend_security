@@ -520,7 +520,7 @@ bot.on("guildBanAdd", async (guild, user) => {
         .get(entry.id)
         .ban()
         .catch(e =>
-          guild.owner.send(`**⇏ | ${entry.username} حاول حظر جميع الأعضاء **`)
+          guild.owner.send(`**⇏ | ${entry.username} هەوڵی داهەموان باند بکا **`)
         );
       anti[guild.id + entry.id].actions = 0;
       fs.writeFile("./config.json", JSON.stringify(config, null, 2), function(
@@ -582,7 +582,7 @@ bot.on("guildKickAdd", async (guild, user) => {
         .get(entry.id)
         .ban()
         .catch(e =>
-          guild.owner.send(`**⇏ | ${entry.username} حاول حظر جميع الأعضاء **`)
+          guild.owner.send(`**⇏ | ${entry.username} هەوڵی داهەموان کیک کا **`)
         );
       anti[guild.id + entry.id].actions = 0;
       fs.writeFile("./config.json", JSON.stringify(config, null, 2), function(
@@ -651,7 +651,7 @@ bot.on("guildMemberRemove", async member => {
           .ban()
           .catch(e =>
             member.owner.send(
-              `**⇏ | ${entry.username} حاول حظر جميع الأعضاء **`
+              `**⇏ | ${entry.username} هەوڵی داهەموان کیک کا **`
             )
           );
         anti[member.guild.id + entry.id].actions = 0;
