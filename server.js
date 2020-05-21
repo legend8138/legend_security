@@ -36,7 +36,7 @@ bot.on("message", message => {
        const embed = new Discord.RichEmbed()
            .setColor("#000000")
            .setDescription(`**زانیاری بۆتکە**
-|  Protection Commands - کۆدی پارێزگاری  
+👮|Protection Commands|👮 - کۆدی پارێزگاری : 
 
 
 〔 !antibots on 〕⇰ 『 هیچ بۆت ئەک ناتوانی بێتە ناو سێرڤەر』
@@ -47,29 +47,31 @@ bot.on("message", message => {
 
 
 
-〔 !settings limitsban 〕⇰ 『  نەفەر باند بکەی خۆت باندەبی 』
+〔 !settings limitsban 〕⇰ 『  • سنورێک بۆ باند کردن۳بۆ٤ کەس 』
 
 
 
-〔 !settings limitskick 〕⇰ 『 نەفەر کیک بکەی خۆت کیکدەبی 』
+〔 !settings limitskick 〕⇰ 『 
+  •  سنورێک بۆ کیک کردن۳بۆ٤ کەس』
 
 
 
-〔 !settings limitsroleC 〕⇰ 『 رۆل دروست بکەی 』
+〔 !settings limitsroleC 〕⇰ 『   •   سنورێک بۆ سڕینەوەی ۳بۆ٤ رۆڵ』
 
 
 
-〔 !settings limitsroleD 〕⇰ 『 رۆڵ رەش بکەیەوە  』
+〔 !settings limitsroleD 〕⇰ 『  سنورێک بۆ سرینەوەی ڕۆڵ ۳بۆ ٤   』
 
 
 
-〔 !settings limitschannelD 〕⇰ 『چەناڵ رەشکەیەوەبانددەبی  』
+〔 !settings limitschannelD 〕⇰ 『سنورێک بۆ سڕینەوەی ۳بۆ٤ ڕووم بۆ ئەوکەسانەی پلەدارن』
 
 
 
 〔 !settings limitstime 〕⇰ 『 ئه وكه سانه ى كه نه فه ر باند ده كه ن روليان ليده ستيندريته وه』
 
-**BY TONY**`)
+
+**•.☪Kak ToNY📿.•**`)
      message.author.sendEmbed(embed)
      
      }
