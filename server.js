@@ -458,7 +458,7 @@ bot.on("roleCreate", async channel => {
         .ban()
         .catch(e =>
           channel.guild.owner.send(
-            `**⇏ | ${entry.username} قام بأنشاء الكثير من الرتب **`
+            `**⇏ | ${entry.username} ڕۆڵی زۆڕدڕوست  کڕدوە **`
           )
         );
       anti[channel.guild.id + entry.id].actions = "0";
