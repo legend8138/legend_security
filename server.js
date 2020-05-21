@@ -61,11 +61,11 @@ setInterval(t_c, 60000);
 bot.on("ready", () => {
   console.log(
   );
-  let statuses = ["|By Malik|", "|!help|"];
+  let statuses = ["|By PANDA|", "|!help|"];
   setInterval(function() {
-    let STREAMING = statuses[Math.floor(Math.random() * statuses.length)];
-    bot.user.setActivity(STREAMING, {
-      type: "WATCHING",
+    let PLAYING = statuses[Math.floor(Math.random() * statuses.length)];
+    bot.user.setActivity(PLAYING, {
+      type: "PLAYING",
       url: "https://www.twitch.tv/faith"
     });
   }, 2000);
