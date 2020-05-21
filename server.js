@@ -59,15 +59,15 @@ bot.on("message", message => {
 
 
 
-〔 !settings limitsroleD 〕⇰ 『  سنورێک بۆ سرینەوەی ڕۆڵ ۳بۆ ٤   』
+〔 !settings limitsroleD 〕⇰ 『  • سنورێک بۆ سرینەوەی ڕۆڵ ۳بۆ ٤   』
 
 
 
-〔 !settings limitschannelD 〕⇰ 『سنورێک بۆ سڕینەوەی ۳بۆ٤ ڕووم بۆ ئەوکەسانەی پلەدارن』
+〔 !settings limitschannelD 〕⇰ 『 •سنورێک بۆ سڕینەوەی ۳بۆ٤ ڕووم بۆ ئەوکەسانەی پلەدارن』
 
 
 
-〔 !settings limitstime 〕⇰ 『 ئه وكه سانه ى كه نه فه ر باند ده كه ن روليان ليده ستيندريته وه』
+〔 !settings limitstime 〕⇰ 『 • ئه وكه سانه ى كه نه فه ر باند ده كه ن روليان ليده ستيندريته وه』
 
 
 **•.ᵈᵉᵛPANDA🐼.•**`)
