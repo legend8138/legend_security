@@ -18,7 +18,7 @@ const bannedwords = ["@here", "@everyone"];
 const ytdl = require("ytdl-core");
 
 
-const prefix = "!";
+const prefix = "p!";
 
 const queue = new Map();
 bot.on("ready", () => console.log("🤖Ready Bot In Online🤖"));
@@ -32,42 +32,42 @@ bot.on('message', msg => {
 });
 
 bot.on("message", message => {
-      if (message.content === "!help") {
+      if (message.content === "p!help") {
        const embed = new Discord.RichEmbed()
            .setColor("#000000")
            .setDescription(`**زانیاری بۆتکە**
 👮|Protection Commands|👮 - کۆدی پارێزگاری : 
 
 
-〔 !antibots on 〕⇰ 『 هیچ بۆت ئەک ناتوانی بێتە ناو سێرڤەر』
+〔 p!antibots on 〕⇰ 『 هیچ بۆت ئەک ناتوانی بێتە ناو سێرڤەر』
 
 
 
-〔 !antibots off 〕⇰ 『بۆت دەتوانی بێنیە ناو سێرڤەر 』
+〔 p!antibots off 〕⇰ 『بۆت دەتوانی بێنیە ناو سێرڤەر 』
 
 
 
-〔 !settings limitsban 〕⇰ 『  • سنورێک بۆ باند کردن۳بۆ٤ کەس 』
+〔 p!settings limitsban 〕⇰ 『  • سنورێک بۆ باند کردن۳بۆ٤ کەس 』
 
 
 
-〔 !settings limitskick 〕⇰ 『 •  سنورێک بۆ کیک کردن۳بۆ٤ کەس』
+〔 p!settings limitskick 〕⇰ 『 •  سنورێک بۆ کیک کردن۳بۆ٤ کەس』
 
 
 
-〔 !settings limitsroleC 〕⇰ 『   •   سنورێک بۆ سڕینەوەی ۳بۆ٤ رۆڵ』
+〔 p!settings limitsroleC 〕⇰ 『   •   سنورێک بۆ سڕینەوەی ۳بۆ٤ رۆڵ』
 
 
 
-〔 !settings limitsroleD 〕⇰ 『  • سنورێک بۆ سرینەوەی ڕۆڵ ۳بۆ ٤   』
+〔 p!settings limitsroleD 〕⇰ 『  • سنورێک بۆ سرینەوەی ڕۆڵ ۳بۆ ٤   』
 
 
 
-〔 !settings limitschannelD 〕⇰ 『 •سنورێک بۆ سڕینەوەی ۳بۆ٤ ڕووم بۆ ئەوکەسانەی پلەدارن』
+〔 p!settings limitschannelD 〕⇰ 『 •سنورێک بۆ سڕینەوەی ۳بۆ٤ ڕووم بۆ ئەوکەسانەی پلەدارن』
 
 
 
-〔 !settings limitstime 〕⇰ 『 • ئه وكه سانه ى كه نه فه ر باند ده كه ن روليان ليده ستيندريته وه』
+〔 p!settings limitstime 〕⇰ 『 • ئه وكه سانه ى كه نه فه ر باند ده كه ن روليان ليده ستيندريته وه』
 
 
 **•.ᵈᵉᵛPANDA🐼.•**`)
@@ -110,7 +110,7 @@ setInterval(t_c, 60000);
 bot.on("ready", () => {
   console.log(
   );
-  let statuses = ["!help"];
+  let statuses = ["p!help"];
   setInterval(function() {
     let PLAYING = statuses[Math.floor(Math.random() * statuses.length)];
     bot.user.setActivity(PLAYING, {
