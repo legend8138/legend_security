@@ -152,7 +152,7 @@ bot.on("message", message => {
       if (isNaN(num)) return message.channel.send("**:1234: | أرقام فقط ! **");
       config[message.guild.id].banLimit = num;
       message.channel.send(
-        `**:lock: | تم التغيير اِلي : ${config[message.guild.id].banLimit} **`
+        `**:lock: | گۆڕا بۆ : ${config[message.guild.id].banLimit} **`
       );
     }
     if (message.content.startsWith(prefix + "settings limitskick")) {
@@ -160,7 +160,7 @@ bot.on("message", message => {
       if (isNaN(num)) return message.channel.send("**:1234: | أرقام فقط ! **");
       config[message.guild.id].kickLimits = num;
       message.channel.send(
-        `**:lock: | تم التغيير اِلي : ${config[message.guild.id].kickLimits}**`
+        `**:lock: | گۆڕا بۆ : ${config[message.guild.id].kickLimits}**`
       );
     }
     if (message.content.startsWith(prefix + "settings limitsroleD")) {
@@ -168,7 +168,7 @@ bot.on("message", message => {
       if (isNaN(num)) return message.channel.send("**:1234: | أرقام فقط ! **");
       config[message.guild.id].roleDelLimit = num;
       message.channel.send(
-        `**:lock: | تم التغيير اِلي : ${config[message.guild.id].roleDelLimit}**`
+        `**:lock: | گۆڕا بۆ : ${config[message.guild.id].roleDelLimit}**`
       );
     }
     if (message.content.startsWith(prefix + "settings limitsroleC")) {
@@ -176,7 +176,7 @@ bot.on("message", message => {
       if (isNaN(num)) return message.channel.send("**:1234: | أرقام فقط ! **");
       config[message.guild.id].roleCrLimits = num;
       message.channel.send(
-        `**:lock: | تم التغيير اِلي : ${config[message.guild.id].roleCrLimits}**`
+        `**:lock: | گۆڕا بۆ : ${config[message.guild.id].roleCrLimits}**`
       );
     }
     if (message.content.startsWith(prefix + "settings limitschannelD")) {
@@ -184,7 +184,7 @@ bot.on("message", message => {
       if (isNaN(num)) return message.channel.send("**:1234: | أرقام فقط ! **");
       config[message.guild.id].chaDelLimit = num;
       message.channel.send(
-        `**:lock: | تم التغيير اِلي : ${config[message.guild.id].chaDelLimit}**`
+        `**:lock: | گۆڕا بۆ : ${config[message.guild.id].chaDelLimit}**`
       );
     }
     if (message.content.startsWith(prefix + "settings limitschannelC")) {
@@ -192,7 +192,7 @@ bot.on("message", message => {
       if (isNaN(num)) return message.channel.send("**:1234: | أرقام فقط ! **");
       config[message.guild.id].chaCrLimit = num;
       message.channel.send(
-        `**:lock: | تم التغيير اِلي : ${config[message.guild.id].chaCrLimit}**`
+        `**:lock: | گۆڕا بۆ : ${config[message.guild.id].chaCrLimit}**`
       );
     }
     if (message.content.startsWith(prefix + "settings limitstime")) {
@@ -200,7 +200,7 @@ bot.on("message", message => {
       if (isNaN(num)) return message.channel.send("**:1234: | أرقام فقط ! **");
       config[message.guild.id].time = num;
       message.channel.send(
-        `**:lock: | تم التغيير اِلي : ${config[message.guild.id].time}**`
+        `**:lock: | گۆڕا بۆ : ${config[message.guild.id].time}**`
       );
     }
   }
