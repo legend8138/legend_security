@@ -110,7 +110,7 @@ setInterval(t_c, 60000);
 bot.on("ready", () => {
   console.log(
   );
-  let statuses = ["|ᵈᵉᵛPANDA🐼|", "|!help|"];
+  let statuses = ["!help"];
   setInterval(function() {
     let PLAYING = statuses[Math.floor(Math.random() * statuses.length)];
     bot.user.setActivity(PLAYING, {
