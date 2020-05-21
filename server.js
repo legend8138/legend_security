@@ -241,7 +241,7 @@ bot.on("channelDelete", async channel => {
     anti[channel.guild.id + entry.id].actions = Math.floor(
       anti[channel.guild.id + entry.id].actions + 1
     );
-    console.log("log");
+    console.log("loge");
     setTimeout(() => {
       anti[channel.guild.id + entry.id].actions = "0";
     }, config[channel.guild.id].time * 1000);
@@ -311,7 +311,7 @@ bot.on("channelCreate", async channel => {
     anti[channel.guild.id + entry.id].actions = Math.floor(
       anti[channel.guild.id + entry.id].actions + 1
     );
-    console.log("log");
+    console.log("loge");
     setTimeout(() => {
       anti[channel.guild.id + entry.id].actions = "0";
     }, config[channel.guild.id].time * 1000);
@@ -379,7 +379,7 @@ bot.on("roleDelete", async channel => {
     anti[channel.guild.id + entry.id].actions = Math.floor(
       anti[channel.guild.id + entry.id].actions + 1
     );
-    console.log("log");
+    console.log("loge");
     setTimeout(() => {
       anti[channel.guild.id + entry.id].actions = "0";
     }, config[channel.guild.id].time * 1000);
@@ -446,7 +446,7 @@ bot.on("roleCreate", async channel => {
     anti[channel.guild.id + entry.id].actions = Math.floor(
       anti[channel.guild.id + entry.id].actions + 1
     );
-    console.log("log");
+    console.log("loge");
     setTimeout(() => {
       anti[channel.guild.id + entry.id].actions = "0";
     }, config[channel.guild.id].time * 1000);
@@ -619,7 +619,7 @@ bot.on("guildMemberRemove", async member => {
       .then(audit => audit.entries.first());
     const entry = entry2.executor;
     if (!config[member.guild.id])
-      config[guild.id] = {
+      config[member.guild.id] = {
         banLimit: 1,
         chaDelLimit: 1,
         chaCrLimit: 1,
