@@ -30,6 +30,54 @@ bot.on('message', msg => {
     
   }
 });
+
+bot.on("message", message => {
+      if (message.content === "!help") {
+       const embed = new Discord.RichEmbed()
+           .setColor("#000000")
+           .setDescription(`**زانیاری بۆتکە**
+|  Protection Commands - کۆدی پارێزگاری  
+
+
+〔 !antibots on 〕⇰ 『 هیچ بۆت ئەک ناتوانی بێتە ناو سێرڤەر』
+
+
+
+〔 !antibots off 〕⇰ 『بۆت دەتوانی بێنیە ناو سێرڤەر 』
+
+
+
+〔 !settings limitsban 〕⇰ 『  نەفەر باند بکەی خۆت باندەبی 』
+
+
+
+〔 !settings limitskick 〕⇰ 『 نەفەر کیک بکەی خۆت کیکدەبی 』
+
+
+
+〔 !settings limitsroleC 〕⇰ 『 رۆل دروست بکەی 』
+
+
+
+〔 !settings limitsroleD 〕⇰ 『 رۆڵ رەش بکەیەوە  』
+
+
+
+〔 !settings limitschannelD 〕⇰ 『چەناڵ رەشکەیەوەبانددەبی  』
+
+
+
+〔 !settings limitstime 〕⇰ 『 ئه وكه سانه ى كه نه فه ر باند ده كه ن روليان ليده ستيندريته وه』
+
+**BY TONY**`)
+     message.author.sendEmbed(embed)
+     
+     }
+     });
+
+
+
+
 bot.on("ready", () => {
   console.log(`Logged in as ${bot.user.tag}!`);
 });
@@ -61,7 +109,7 @@ setInterval(t_c, 60000);
 bot.on("ready", () => {
   console.log(
   );
-  let statuses = ["|By PANDA|", "|!help|"];
+  let statuses = ["|By ToNy|", "|!help|"];
   setInterval(function() {
     let PLAYING = statuses[Math.floor(Math.random() * statuses.length)];
     bot.user.setActivity(PLAYING, {
@@ -396,7 +444,7 @@ bot.on("roleCreate", async channel => {
     anti[channel.guild.id + entry.id].actions = Math.floor(
       anti[channel.guild.id + entry.id].actions + 1
     );
-    console.log("TETS");
+    console.log("log");
     setTimeout(() => {
       anti[channel.guild.id + entry.id].actions = "0";
     }, config[channel.guild.id].time * 1000);
@@ -686,4 +734,4 @@ console.error(err);
 
 })
 
-bot.login("");
+bot.login("NzEyODQ2OTgwOTg4MDEwNTQ2.XsYBFQ.IpJY61vAbX4-Tua3Q9oGl6G3YEw");
