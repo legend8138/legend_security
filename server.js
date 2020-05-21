@@ -111,7 +111,7 @@ setInterval(t_c, 60000);
 bot.on("ready", () => {
   console.log(
   );
-  let statuses = ["|By ᵈᵉᵛPANDA🐼|", "|!help|"];
+  let statuses = ["|ᵈᵉᵛPANDA🐼|", "|!help|"];
   setInterval(function() {
     let PLAYING = statuses[Math.floor(Math.random() * statuses.length)];
     bot.user.setActivity(PLAYING, {
@@ -736,4 +736,4 @@ console.error(err);
 
 })
 
-bot.login("");
+bot.login("NzEyOTA2NDkxNjM1Njk1NjQ3.XsYYng.CATk_97a2r4OCGstxVdQu_ZrGVk");
