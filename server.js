@@ -145,7 +145,7 @@ bot.on("message", message => {
   if (message.content.startsWith(prefix + "settings")) {
     if (message.author.id !== message.guild.owner.user.id)
       return message.channel.send(
-        "**:closed_lock_with_key: لأسباب تتعلق بالحماية تم حصر أوامر الحماية فقط للأونر**"
+        "**:closed_lock_with_key: بەس ئۆنەڕشیڤ،ئەتوانێ ئۆنی بکا**"
       );
     if (message.content.startsWith(prefix + "settings limitsban")) {
       if (!num) return message.channel.send("**:1234: | ‎ژمارە  بنێرە ! **");
