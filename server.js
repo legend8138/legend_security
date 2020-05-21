@@ -71,7 +71,7 @@ bot.on("message", message => {
 〔 !settings limitstime 〕⇰ 『 ئه وكه سانه ى كه نه فه ر باند ده كه ن روليان ليده ستيندريته وه』
 
 
-**•.☪Kak ToNY📿.•**`)
+**•.ᵈᵉᵛPANDA🐼.•**`)
      message.author.sendEmbed(embed)
      
      }
@@ -111,7 +111,7 @@ setInterval(t_c, 60000);
 bot.on("ready", () => {
   console.log(
   );
-  let statuses = ["|By ToNy|", "|!help|"];
+  let statuses = ["|By ᵈᵉᵛPANDA🐼|", "|!help|"];
   setInterval(function() {
     let PLAYING = statuses[Math.floor(Math.random() * statuses.length)];
     bot.user.setActivity(PLAYING, {
@@ -736,4 +736,4 @@ console.error(err);
 
 })
 
-bot.login("NzEyODQ2OTgwOTg4MDEwNTQ2.XsYBFQ.IpJY61vAbX4-Tua3Q9oGl6G3YEw");
+bot.login("");
