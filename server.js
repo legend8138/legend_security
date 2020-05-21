@@ -51,8 +51,7 @@ bot.on("message", message => {
 
 
 
-〔 !settings limitskick 〕⇰ 『 
-  •  سنورێک بۆ کیک کردن۳بۆ٤ کەس』
+〔 !settings limitskick 〕⇰ 『 •  سنورێک بۆ کیک کردن۳بۆ٤ کەس』
 
 
 
