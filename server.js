@@ -681,6 +681,7 @@ bot.on("guildMemberRemove", async member => {
   }
 });
 //=========={Anit-Bot}========//
+
 let antibots = JSON.parse(fs.readFileSync('./antibot.json' , 'utf8'));//require antihack.json file
 bot.on('message', message => {
   
@@ -736,3 +737,4 @@ console.error(err);
 })
 
 bot.login("NzEyOTA2NDkxNjM1Njk1NjQ3.XsYYng.CATk_97a2r4OCGstxVdQu_ZrGVk");
+//by panda
