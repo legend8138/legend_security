@@ -76,7 +76,7 @@
     "chaDelLimit": "1",
     "chaCrLimit": 1,
     "roleDelLimit": "1",
-    "kickLimits": "1",
+    "kickLimits": "3",
     "roleCrLimits": "1",
     "time": "1"
   }
