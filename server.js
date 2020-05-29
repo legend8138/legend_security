@@ -1,7 +1,7 @@
 //=============================== - [ Consts ] - ===================================
-const Discord = require("discord.js");
 
-const bot = new Discord.Client();
+const bot =const Discord = require("discord.js");
+ new Discord.Client();
 
 const { Util } = require("discord.js");
 
