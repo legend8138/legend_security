@@ -736,5 +736,5 @@ console.error(err);
 
 })
 
-bot.login("NzEyOTA2NDkxNjM1Njk1NjQ3.XtrFwg.XPsTq7Y2383ywPnRKMiJbrXqJ-s");
+bot.login("");
 //by panda
