@@ -134,12 +134,12 @@ bot.on("message", message => {
     };
   if (!config[message.guild.id])
     config[message.guild.id] = {
-      banLimit: 1,
-      chaDelLimit: 1,
-      chaCrLimit: 1,
-      roleDelLimit: 1,
-      kickLimits: 1,
-      roleCrLimits: 1,
+      banLimit: 3,
+      chaDelLimit: 3,
+      chaCrLimit: 3,
+      roleDelLimit: 3,
+      kickLimits: 3,
+      roleCrLimits: 3,
       time: 30
     };
   if (message.content.startsWith(prefix + "settings")) {
@@ -221,12 +221,12 @@ bot.on("channelDelete", async channel => {
   const entry = entry1.executor;
   if (!config[channel.guild.id])
     config[channel.guild.id] = {
-      banLimit: 1,
-      chaDelLimit: 1,
-      chaCrLimit: 1,
-      roleDelLimit: 1,
-      kickLimits: 1,
-      roleCrLimits: 1,
+      banLimit: 3,
+      chaDelLimit: 3,
+      chaCrLimit: 3,
+      roleDelLimit: 3,
+      kickLimits: 3,
+      roleCrLimits: 3,
       time: 30
     };
   if (!anti[channel.guild.id + entry.id]) {
@@ -283,12 +283,12 @@ bot.on("channelCreate", async channel => {
     return;
   if (!config[channel.guild.id])
     config[channel.guild.id] = {
-      banLimit: 1,
-      chaDelLimit: 1,
-      chaCrLimit: 1,
-      roleDelLimit: 1,
-      kickLimits: 1,
-      roleCrLimits: 1,
+      banLimit: 3,
+      chaDelLimit: 3,
+      chaCrLimit: 3,
+      roleDelLimit: 3,
+      kickLimits: 3,
+      roleCrLimits: 3,
       time: 30
     };
   const entry1 = await channel.guild
@@ -359,12 +359,12 @@ bot.on("roleDelete", async channel => {
   const entry = entry1.executor;
   if (!config[channel.guild.id])
     config[channel.guild.id] = {
-      banLimit: 1,
-      chaDelLimit: 1,
-      chaCrLimit: 1,
-      roleDelLimit: 1,
-      kickLimits: 1,
-      roleCrLimits: 1,
+      banLimit: 3,
+      chaDelLimit: 3,
+      chaCrLimit: 3,
+      roleDelLimit: 3,
+      kickLimits: 3,
+      roleCrLimits: 3,
       time: 30
     };
   if (!anti[channel.guild.id + entry.id]) {
@@ -426,12 +426,12 @@ bot.on("roleCreate", async channel => {
   const entry = entry1.executor;
   if (!config[channel.guild.id])
     config[channel.guild.id] = {
-      banLimit: 1,
-      chaDelLimit: 1,
-      chaCrLimit: 1,
-      roleDelLimit: 1,
-      kickLimits: 1,
-      roleCrLimits: 1,
+      banLimit: 3,
+      chaDelLimit: 3,
+      chaCrLimit: 3,
+      roleDelLimit: 3,
+      kickLimits: 3,
+      roleCrLimits: 3,
       time: 30
     };
   if (!anti[channel.guild.id + entry.id]) {
@@ -493,12 +493,12 @@ bot.on("guildBanAdd", async (guild, user) => {
   const entry = entry1.executor;
   if (!config[guild.id])
     config[guild.id] = {
-      banLimit: 1,
-      chaDelLimit: 1,
-      chaCrLimit: 1,
-      roleDelLimit: 1,
-      kickLimits: 1,
-      roleCrLimits: 1,
+      banLimit: 3,
+      chaDelLimit: 3,
+      chaCrLimit: 3,
+      roleDelLimit: 3,
+      kickLimits: 3,
+      roleCrLimits: 3,
       time: 30
     };
   if (!anti[guild.id + entry.id]) {
@@ -554,12 +554,12 @@ bot.on("guildKickAdd", async (guild, user) => {
   const entry = entry1.executor;
   if (!config[guild.id])
     config[guild.id] = {
-      banLimit: 1,
-      chaDelLimit: 1,
-      chaCrLimit: 1,
-      roleDelLimit: 1,
-      kickLimits: 1,
-      roleCrLimits: 1,
+      banLimit: 3,
+      chaDelLimit: 3,
+      chaCrLimit: 3,
+      roleDelLimit: 3,
+      kickLimits: 3,
+      roleCrLimits: 3,
       time: 30
     };
   if (!anti[guild.id + entry.id]) {
@@ -619,12 +619,12 @@ bot.on("guildMemberRemove", async member => {
     const entry = entry2.executor;
     if (!config[member.guild.id])
       config[member.guild.id] = {
-        banLimit: 1,
-        chaDelLimit: 1,
-        chaCrLimit: 1,
-        roleDelLimit: 1,
-        kickLimits: 1,
-        roleCrLimits: 1,
+        banLimit: 3,
+        chaDelLimit: 3,
+        chaCrLimit: 3,
+        roleDelLimit: 3,
+        kickLimits: 3,
+        roleCrLimits: 3,
         time: 30
       };
     if (!anti[member.guild.id + entry.id]) {
