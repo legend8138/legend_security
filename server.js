@@ -17,25 +17,21 @@ const bannedwords = ["@here", "@everyone"];
 
 const ytdl = require("ytdl-core");
 
-
 const prefix = "a!";
 
 const queue = new Map();
 bot.on("ready", () => console.log("🤖Ready Bot In Online🤖"));
 
-bot.on('message', msg => {
-  if (msg.content === 'Hi') {
-    msg.reply('Hi gays');
-    
-    
+bot.on("message", msg => {
+  if (msg.content === "Hi") {
+    msg.reply("Hi gays");
   }
 });
 
 bot.on("message", message => {
-      if (message.content === "a!help") {
-       const embed = new Discord.RichEmbed()
-           .setColor("#000000")
-           .setDescription(`**زانیاری بۆتکە**
+  if (message.content === "a!help") {
+    const embed = new Discord.RichEmbed().setColor("#000000")
+      .setDescription(`**زانیاری بۆتکە**
 👮|Protection Commands|👮 - کۆدی پارێزگاری : 
 
 
@@ -47,37 +43,33 @@ bot.on("message", message => {
 
 
 
-〔 a!settings limitsban 〕⇰ 『  • سنورێک بۆ باند کردن۳بۆ٤ کەس 』
+〔 a!anti ban 〕⇰ 『  • سنورێک بۆ باند کردن۳بۆ٤ کەس 』
 
 
 
-〔 a!settings limitskick 〕⇰ 『 •  سنورێک بۆ کیک کردن۳بۆ٤ کەس』
+〔 a!anti kick 〕⇰ 『 •  سنورێک بۆ کیک کردن۳بۆ٤ کەس』
 
 
 
-〔 a!settings limitsroleC 〕⇰ 『   •   سنورێک بۆ سڕینەوەی ۳بۆ٤ رۆڵ』
+〔 a!anti roleC 〕⇰ 『   •   سنورێک بۆ سڕینەوەی ۳بۆ٤ رۆڵ』
 
 
 
-〔 a!settings limitsroleD 〕⇰ 『  • سنورێک بۆ سرینەوەی ڕۆڵ ۳بۆ ٤   』
+〔 a!anti roleD 〕⇰ 『  • سنورێک بۆ دروستکردنی ڕۆڵ ۳بۆ ٤   』
 
 
 
-〔 a!settings limitschannelD 〕⇰ 『 •سنورێک بۆ سڕینەوەی ۳بۆ٤ ڕووم بۆ ئەوکەسانەی پلەدارن』
+〔 a!anti channel 〕⇰ 『 •سنورێک بۆ سڕینەوەی ۳بۆ٤ ڕووم بۆ ئەوکەسانەی پلەدارن』
 
 
 
-〔 a!settings limitstime 〕⇰ 『 • ئه وكه سانه ى كه نه فه ر باند ده كه ن روليان ليده ستيندريته وه』
+〔 a!anti time 〕⇰ 『 • ئه وكه سانه ى كه نه فه ر باند ده كه ن روليان ليده ستيندريته وه』
 
 
-**•.ᵈᵉᵛPANDA🐼.•**`)
-     message.author.sendEmbed(embed)
-     
-     }
-     });
-
-
-
+**•By ᵏᵃᵏ  𝐴𝐺𝑅𝐼𝑁•**`);
+    message.author.sendEmbed(embed);
+  }
+});
 
 bot.on("ready", () => {
   console.log(`Logged in as ${bot.user.tag}!`);
@@ -91,21 +83,23 @@ bot.on("ready", () => {
   console.log(`[!]-------------------------------------[!]`);
 });
 
- const express = require("express");
+const express = require("express");
 
-const app = express ();
-app.get ('/', (req, res) => {
-  res.sendStatus (200);
+const app = express();
+app.get("/", (req, res) => {
+  res.sendStatus(200);
 });
-app.listen (process.env.PORT);
+app.listen(process.env.PORT);
 function t_c() {
-  request.get(`https://${process.env.PROJECT_DOMAIN}.glitch.me/`, (error, response, body) => {
-    let Malik = body;
-    return Malik;
-  });
+  request.get(
+    `https://${process.env.PROJECT_DOMAIN}.glitch.me/`,
+    (error, response, body) => {
+      let PANDA = body;
+      return PANDA;
+    }
+  );
 }
 setInterval(t_c, 60000);
-
 
 bot.on("ready", () => {
   bot.user.setActivity("a!help|It's time to secure your server!", { type: "" });
@@ -141,31 +135,35 @@ bot.on("message", message => {
       );
     if (message.content.startsWith(prefix + "anti ban")) {
       if (!num) return message.channel.send("**:1234: | ‎ژمارە  بنێرە ! **");
-      if (isNaN(num)) return message.channel.send("**:1234: | تەنها ژمارە ! **");
+      if (isNaN(num))
+        return message.channel.send("**:1234: | تەنها ژمارە ! **");
       config[message.guild.id].banLimit = num;
       message.channel.send(
         `**:lock: | گۆڕا بۆ : ${config[message.guild.id].banLimit} **`
       );
     }
-    if (message.content.startsWith(prefix + "settings limitskick")) {
+    if (message.content.startsWith(prefix + "anti kick")) {
       if (!num) return message.channel.send("**:1234: | ‎ژمارە  بنێرە ! **");
-      if (isNaN(num)) return message.channel.send("**:1234: | تەنها ژمارە ! **");
+      if (isNaN(num))
+        return message.channel.send("**:1234: | تەنها ژمارە ! **");
       config[message.guild.id].kickLimits = num;
       message.channel.send(
         `**:lock: | گۆڕا بۆ : ${config[message.guild.id].kickLimits}**`
       );
     }
-    if (message.content.startsWith(prefix + "anti role")) {
+    if (message.content.startsWith(prefix + "anti roleC")) {
       if (!num) return message.channel.send("**:1234: | ‎ژمارە  بنێرە ! **");
-      if (isNaN(num)) return message.channel.send("**:1234: | تەنها ژمارە ! **");
+      if (isNaN(num))
+        return message.channel.send("**:1234: | تەنها ژمارە ! **");
       config[message.guild.id].roleDelLimit = num;
       message.channel.send(
         `**:lock: | گۆڕا بۆ : ${config[message.guild.id].roleDelLimit}**`
       );
     }
-    if (message.content.startsWith(prefix + "anti role")) {
+    if (message.content.startsWith(prefix + "anti roleD")) {
       if (!num) return message.channel.send("**:1234: | ‎ژمارە  بنێرە ! **");
-      if (isNaN(num)) return message.channel.send("**:1234: | تەنها ژمارە ! **");
+      if (isNaN(num))
+        return message.channel.send("**:1234: | تەنها ژمارە ! **");
       config[message.guild.id].roleCrLimits = num;
       message.channel.send(
         `**:lock: | گۆڕا بۆ : ${config[message.guild.id].roleCrLimits}**`
@@ -173,7 +171,8 @@ bot.on("message", message => {
     }
     if (message.content.startsWith(prefix + "anti channel")) {
       if (!num) return message.channel.send("**:1234: | ‎ژمارە  بنێرە ! **");
-      if (isNaN(num)) return message.channel.send("**:1234: | تەنها ژمارە ! **");
+      if (isNaN(num))
+        return message.channel.send("**:1234: | تەنها ژمارە ! **");
       config[message.guild.id].chaDelLimit = num;
       message.channel.send(
         `**:lock: | گۆڕا بۆ : ${config[message.guild.id].chaDelLimit}**`
@@ -181,15 +180,17 @@ bot.on("message", message => {
     }
     if (message.content.startsWith(prefix + "anti channel")) {
       if (!num) return message.channel.send("**:1234: | ‎ژمارە  بنێرە ! **");
-      if (isNaN(num)) return message.channel.send("**:1234: | تەنها ژمارە ! **");
+      if (isNaN(num))
+        return message.channel.send("**:1234: | تەنها ژمارە ! **");
       config[message.guild.id].chaCrLimit = num;
       message.channel.send(
         `**:lock: | گۆڕا بۆ : ${config[message.guild.id].chaCrLimit}**`
       );
     }
-    if (message.content.startsWith(prefix + "settings limitstime")) {
+    if (message.content.startsWith(prefix + "anti time")) {
       if (!num) return message.channel.send("**:1234: | ‎ژمارە  بنێرە ! **");
-      if (isNaN(num)) return message.channel.send("**:1234: | تەنها ژمارە ! **");
+      if (isNaN(num))
+        return message.channel.send("**:1234: | تەنها ژمارە ! **");
       config[message.guild.id].time = num;
       message.channel.send(
         `**:lock: | گۆڕا بۆ : ${config[message.guild.id].time}**`
@@ -674,59 +675,59 @@ bot.on("guildMemberRemove", async member => {
 });
 //=========={Anit-Bot}========//
 
-let antibots = JSON.parse(fs.readFileSync('./antibot.json' , 'utf8'));//require antihack.json file
-bot.on('message', message => {
-  
-    if(message.content.startsWith(prefix + "antibots on")) {
-       if(!message.member.hasPermission('Ownership')) return message.reply(':');
-      antibots[message.guild.id] = {
-onoff: 'On',
-}
-message.channel.send(`**‎✅ **__بە سەرکەوتوانە ئێستا بۆت ناتوانێ جۆین سێرڤەر بێت__`)
-          fs.writeFile("./antibot.json", JSON.stringify(antibots), (err) => {
-            if (err) console.error(err)
-            .catch(err => {
-              console.error(err);
-          });
-            });
-          }
+let antibots = JSON.parse(fs.readFileSync("./antibot.json", "utf8")); //require antihack.json file
+bot.on("message", message => {
+  if (message.content.startsWith(prefix + "antibots on")) {
+    if (!message.member.hasPermission("Ownership")) return message.reply(":");
+    antibots[message.guild.id] = {
+      onoff: "On"
+    };
+    message.channel.send(
+      `**‎✅ **__بە سەرکەوتوانە ئێستا بۆت ناتوانێ جۆین سێرڤەر بێت__`
+    );
+    fs.writeFile("./antibot.json", JSON.stringify(antibots), err => {
+      if (err)
+        console.error(err).catch(err => {
+          console.error(err);
+        });
+    });
+  }
+});
+//antihack with ON , OFF ! RARE CODE
+//LIKE PLUSBOT !
 
-        })
-        //antihack with ON , OFF ! RARE CODE 
-        //LIKE PLUSBOT !
-
-
-bot.on('message', message => {
-    if(message.content.startsWith(prefix + "antibots off")) {      
-      if(!message.member.hasPermission('Ownership')) return message.reply('');
-antibots[message.guild.id] = {
-onoff: 'Off',
-}
-message.channel.send(`**✅ __بە سەرکەوتوانە ئێستا بۆت دەتوانی جۆین ی سێرڤەر بکات__**`)
-          fs.writeFile("./antibot.json", JSON.stringify(antibots), (err) => {
-            if (err) console.error(err)
-            .catch(err => {
-              console.error(err);
-          });
-            });
-          }
-
-        })
+bot.on("message", message => {
+  if (message.content.startsWith(prefix + "antibots off")) {
+    if (!message.member.hasPermission("Ownership")) return message.reply("");
+    antibots[message.guild.id] = {
+      onoff: "Off"
+    };
+    message.channel.send(
+      `**✅ __بە سەرکەوتوانە ئێستا بۆت دەتوانی جۆین ی سێرڤەر بکات__**`
+    );
+    fs.writeFile("./antibot.json", JSON.stringify(antibots), err => {
+      if (err)
+        console.error(err).catch(err => {
+          console.error(err);
+        });
+    });
+  }
+});
 bot.on("guildMemberAdd", member => {
-  if(!antibots[member.guild.id]) antibots[member.guild.id] = {
-onoff: 'Off'
-}
-  if(antibots[member.guild.id].onoff === 'Off') return;
-if(member.user.bot) return member.kick()
-})
-
-fs.writeFile("./antibot.json", JSON.stringify(antibots), (err) => {
-if (err) console.error(err)
-.catch(err => {
-console.error(err);
+  if (!antibots[member.guild.id])
+    antibots[member.guild.id] = {
+      onoff: "Off"
+    };
+  if (antibots[member.guild.id].onoff === "Off") return;
+  if (member.user.bot) return member.kick();
 });
 
-})
+fs.writeFile("./antibot.json", JSON.stringify(antibots), err => {
+  if (err)
+    console.error(err).catch(err => {
+      console.error(err);
+    });
+});
 
 bot.login("");
 //by panda
