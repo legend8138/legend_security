@@ -139,7 +139,7 @@ bot.on("message", message => {
       return message.channel.send(
         "**:closed_lock_with_key: بەس ئۆنەڕشیڤ،ئەتوانێ ئۆنی بکا**"
       );
-    if (message.content.startsWith(prefix + "settings limitsban")) {
+    if (message.content.startsWith(prefix + "anti ban")) {
       if (!num) return message.channel.send("**:1234: | ‎ژمارە  بنێرە ! **");
       if (isNaN(num)) return message.channel.send("**:1234: | تەنها ژمارە ! **");
       config[message.guild.id].banLimit = num;
@@ -155,7 +155,7 @@ bot.on("message", message => {
         `**:lock: | گۆڕا بۆ : ${config[message.guild.id].kickLimits}**`
       );
     }
-    if (message.content.startsWith(prefix + "settings limitsroleD")) {
+    if (message.content.startsWith(prefix + "anti role")) {
       if (!num) return message.channel.send("**:1234: | ‎ژمارە  بنێرە ! **");
       if (isNaN(num)) return message.channel.send("**:1234: | تەنها ژمارە ! **");
       config[message.guild.id].roleDelLimit = num;
@@ -163,7 +163,7 @@ bot.on("message", message => {
         `**:lock: | گۆڕا بۆ : ${config[message.guild.id].roleDelLimit}**`
       );
     }
-    if (message.content.startsWith(prefix + "settings limitsroleC")) {
+    if (message.content.startsWith(prefix + "anti role")) {
       if (!num) return message.channel.send("**:1234: | ‎ژمارە  بنێرە ! **");
       if (isNaN(num)) return message.channel.send("**:1234: | تەنها ژمارە ! **");
       config[message.guild.id].roleCrLimits = num;
@@ -171,7 +171,7 @@ bot.on("message", message => {
         `**:lock: | گۆڕا بۆ : ${config[message.guild.id].roleCrLimits}**`
       );
     }
-    if (message.content.startsWith(prefix + "settings limitschannelD")) {
+    if (message.content.startsWith(prefix + "anti channel")) {
       if (!num) return message.channel.send("**:1234: | ‎ژمارە  بنێرە ! **");
       if (isNaN(num)) return message.channel.send("**:1234: | تەنها ژمارە ! **");
       config[message.guild.id].chaDelLimit = num;
