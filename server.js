@@ -62,6 +62,9 @@ bot.on("message", message => {
 〔 a!anti time 〕⇰ 『 • ئه وكه سانه ى كه نه فه ر باند ده كه ن روليان ليده ستيندريته وه』
 
 
+
+〔 a!invite 〕⇰ 『 • بۆئینڤایت کردنی بۆت بۆ سیرڤەرەکەت 』
+
 **•By ᵏᵃᵏ  𝐴𝐺𝑅𝐼𝑁•**`);
     message.author.sendEmbed(embed);
   }
@@ -98,8 +101,8 @@ function t_c() {
 setInterval(t_c, 60000);
 
 bot.on("ready", () => {
-  bot.user.setActivity("a!help|It's time to secure your server!", { type: "" });
-  bot.user.setStatus("idle");
+  bot.user.setActivity("a!help | It's time to secure your server!", { type: "" });
+  bot.user.setStatus("");
 });
 let anti = JSON.parse(fs.readFileSync("./antigrefff.json", "UTF8"));
 let config = JSON.parse(fs.readFileSync("./server.json", "UTF8"));
@@ -725,5 +728,24 @@ fs.writeFile("./antibot.json", JSON.stringify(antibots), err => {
     });
 });
 
+
+bot.on("message", message => {
+  if (message.content === "a!invite") {
+    if (!message.channel.guild)
+      return message.reply(
+        "Please Do not type bot commands in bot private chat"
+      );
+    let embed = new Discord.RichEmbed()
+      .setColor("GREEN")
+      .setTitle("=--> LINK INVITE BOT  <--=")
+      .setURL(
+        "https://discord.com/api/oauth2/authorize?client_id=706304084013088780&permissions=8&scope=bot"
+      ) // Type Your Link here after ''
+      .setFooter("BOT NAME", message.author.avatarURL);
+    message.channel.sendEmbed(embed);
+  }
+});
+
+
 bot.login("NzA2MzA0MDg0MDEzMDg4Nzgw.Xusb8A.m4cYpUP_l79bbNLYxluiHc4dwYo");
-//by panda
+
