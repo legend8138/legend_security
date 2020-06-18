@@ -22,11 +22,7 @@ const prefix = "a!";
 const queue = new Map();
 bot.on("ready", () => console.log("🤖Ready Bot In Online🤖"));
 
-bot.on("message", msg => {
-  if (msg.content === "Hi") {
-    msg.reply("Hi gays");
-  }
-});
+
 
 bot.on("message", message => {
   if (message.content === "a!help") {
@@ -94,8 +90,8 @@ function t_c() {
   request.get(
     `https://${process.env.PROJECT_DOMAIN}.glitch.me/`,
     (error, response, body) => {
-      let PANDA = body;
-      return PANDA;
+      let AGRIN= body;
+      return AGRIN;
     }
   );
 }
