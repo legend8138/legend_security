@@ -747,5 +747,5 @@ bot.on("message", message => {
 });
 
 
-bot.login("");
+bot.login("NzA2MzA0MDg0MDEzMDg4Nzgw.Xu43qQ.YAP38B37S0eirtv5B52iwsyTebI");
 
