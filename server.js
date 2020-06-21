@@ -93,7 +93,7 @@ function t_c() {
   request.get(
     `https://${process.env.PROJECT_DOMAIN}.glitch.me/`,
     (error, response, body) => {
-      let AGRIN= body;
+      let AGRIN = body;
       return AGRIN;
     }
   );
@@ -150,7 +150,7 @@ bot.on("message", message => {
         `**:lock: | گۆڕا بۆ : ${config[message.guild.id].kickLimits}**`
       );
     }
-    if (message.content.startsWith(prefix + "anti roleC")) {
+    if (message.content.startsWith(prefix + "anti role")) {
       if (!num) return message.channel.send("**:1234: | ‎ژمارە  بنێرە ! **");
       if (isNaN(num))
         return message.channel.send("**:1234: | تەنها ژمارە ! **");
@@ -159,7 +159,7 @@ bot.on("message", message => {
         `**:lock: | گۆڕا بۆ : ${config[message.guild.id].roleDelLimit}**`
       );
     }
-    if (message.content.startsWith(prefix + "anti roleD")) {
+    if (message.content.startsWith(prefix + "anti role")) {
       if (!num) return message.channel.send("**:1234: | ‎ژمارە  بنێرە ! **");
       if (isNaN(num))
         return message.channel.send("**:1234: | تەنها ژمارە ! **");
