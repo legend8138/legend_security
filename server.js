@@ -729,7 +729,7 @@ fs.writeFile("./antibot.json", JSON.stringify(antibots), err => {
 });
 
 
-bot.on("message", message => {
+  bot.on("message", message => {
   if (message.content === "a!invite") {
     if (!message.channel.guild)
       return message.reply(
