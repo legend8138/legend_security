@@ -17,7 +17,7 @@ const bannedwords = ["@here", "@everyone"];
 
 const ytdl = require("ytdl-core");
 
-const prefix = "a!";
+const prefix = "m!";
 
 const queue = new Map();
 bot.on("ready", () => console.log("🤖Ready Bot In Online🤖"));
@@ -25,45 +25,45 @@ bot.on("ready", () => console.log("🤖Ready Bot In Online🤖"));
 
 
 bot.on("message", message => {
-  if (message.content === "a!help") {
+  if (message.content === "m!help") {
     const embed = new Discord.RichEmbed().setColor("#000000")
       .setDescription(`**زانیاری بۆتکە**
 👮|Protection Commands|👮 - کۆدی پارێزگاری : 
 
 
-〔 a!antibots on 〕⇰ 『 هیچ بۆت ئەک ناتوانی بێتە ناو سێرڤەر』
+〔 m!antibots on 〕⇰ 『 هیچ بۆت ئەک ناتوانی بێتە ناو سێرڤەر』
 
 
 
-〔 a!antibots off 〕⇰ 『بۆت دەتوانی بێنیە ناو سێرڤەر 』
+〔 m!antibots off 〕⇰ 『بۆت دەتوانی بێنیە ناو سێرڤەر 』
 
 
 
-〔 a!anti ban 〕⇰ 『  • سنورێک بۆ باند کردن۳بۆ٤ کەس 』
+〔 m!anti ban 〕⇰ 『  • سنورێک بۆ باند کردن۳بۆ٤ کەس 』
 
 
 
-〔 a!anti kick 〕⇰ 『 •  سنورێک بۆ کیک کردن۳بۆ٤ کەس』
+〔 m!anti kick 〕⇰ 『 •  سنورێک بۆ کیک کردن۳بۆ٤ کەس』
 
 
 
-〔 a!anti role 〕⇰ 『   •   سنورێک بۆ سڕینەوەی ۳بۆ٤ رۆڵ』
+〔 m!anti role 〕⇰ 『   •   سنورێک بۆ سڕینەوەی ۳بۆ٤ رۆڵ』
 
 
 
-〔 a!anti role 〕⇰ 『  • سنورێک بۆ دروستکردنی ڕۆڵ ۳بۆ ٤   』
+〔 m!anti role 〕⇰ 『  • سنورێک بۆ دروستکردنی ڕۆڵ ۳بۆ ٤   』
 
 
 
-〔 a!anti channel 〕⇰ 『 •سنورێک بۆ سڕینەوەی ۳بۆ٤ ڕووم بۆ ئەوکەسانەی پلەدارن』
+〔 m!anti channel 〕⇰ 『 •سنورێک بۆ سڕینەوەی ۳بۆ٤ ڕووم بۆ ئەوکەسانەی پلەدارن』
 
 
 
-〔 a!anti time 〕⇰ 『 • ئه وكه سانه ى كه نه فه ر باند ده كه ن روليان ليده ستيندريته وه』
+〔 m!anti time 〕⇰ 『 • ئه وكه سانه ى كه نه فه ر باند ده كه ن روليان ليده ستيندريته وه』
 
 
 
-〔 a!invite 〕⇰ 『 • بۆئینڤایت کردنی بۆت بۆ سیرڤەرەکەت 』
+〔 m!invite 〕⇰ 『 • بۆئینڤایت کردنی بۆت بۆ سیرڤەرەکەت 』
 
 **•By ᵏᵃᵏ  𝐴𝐺𝑅𝐼𝑁•**`);
     message.author.sendEmbed(embed);
@@ -101,7 +101,7 @@ function t_c() {
 setInterval(t_c, 60000);
 
 bot.on("ready", () => {
-  bot.user.setActivity("a!help | It's time to secure your server!", { type: "" });
+  bot.user.setActivity("m!help | It's time to secure your server!", { type: "" });
   bot.user.setStatus("");
 });
 let anti = JSON.parse(fs.readFileSync("./antigrefff.json", "UTF8"));
@@ -730,18 +730,19 @@ fs.writeFile("./antibot.json", JSON.stringify(antibots), err => {
 
 
   bot.on("message", message => {
-  if (message.content === "a!invite") {
+  if (message.content === "m!invite") {
     if (!message.channel.guild)
       return message.reply(
         "Please Do not type bot commands in bot private chat"
       );
     let embed = new Discord.RichEmbed()
       .setColor("GREEN")
-      .setTitle("=--> LINK INVITE BOT  <--=")
+      .setTitle("=--> بۆ ڕاکێشانی بۆتەکە داگرە  <--=")
+      .setImage("https://cdn.discordapp.com/attachments/724596106377560097/724605098512089149/LEGEND_20200622_154143.gif")
       .setURL(
-        "https://discord.com/api/oauth2/authorize?client_id=706304084013088780&permissions=8&scope=bot"
+        ""
       ) // Type Your Link here after ''
-      .setFooter("BOT NAME", message.author.avatarURL);
+      .setFooter("𝐁𝐘 𝐌𝐀𝐑𝐒 ❥︎ 𝐋𝐀𝐇𝐔𝐑𝐈", message.author.avatarURL);
     message.channel.sendEmbed(embed);
   }
 });
