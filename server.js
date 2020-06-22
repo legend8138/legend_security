@@ -130,7 +130,7 @@ bot.on("message", message => {
   if (message.content.startsWith(prefix + "settings")) {
     if (message.author.id !== message.guild.owner.user.id)
       return message.channel.send(
-        "**:closed_lock_with_key: بەس ئۆنەڕشیڤ،ئەتوانێ ئۆنی بکا**"
+        "**:closed_lock_with_key:  بەس ئۆنەڕشیڤ،ئەتوانێ ئۆنی بکات**"
       );
     if (message.content.startsWith(prefix + "anti ban")) {
       if (!num) return message.channel.send("**:1234: | ‎ژمارە  بنێرە ! **");
