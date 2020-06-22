@@ -65,7 +65,7 @@ bot.on("message", message => {
 
 〔 m!invite 〕⇰ 『 • بۆئینڤایت کردنی بۆت بۆ سیرڤەرەکەت 』
 
-**•By ᵏᵃᵏ  𝐴𝐺𝑅𝐼𝑁•**`);
+**•𝐁𝐘 𝐌𝐀𝐑𝐒 ❥︎ 𝐋𝐀𝐇𝐔𝐑𝐈•**`);
     message.author.sendEmbed(embed);
   }
 });
@@ -748,5 +748,5 @@ fs.writeFile("./antibot.json", JSON.stringify(antibots), err => {
 });
 
 
-bot.login("NzI0NjQ0MjcwMjY2NjQ2NjEw.XvDLpA.r-AczmEJwFhS6gKwMtN4WKxi0Vw");
+bot.login("NzI0NjQ0MjcwMjY2NjQ2NjEw.XvDPOA.gFaE0TJPD7LxHCz40OSoDgYLvNQ");
 
