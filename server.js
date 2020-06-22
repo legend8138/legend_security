@@ -47,11 +47,11 @@ bot.on("message", message => {
 
 
 
-〔 a!anti roleC 〕⇰ 『   •   سنورێک بۆ سڕینەوەی ۳بۆ٤ رۆڵ』
+〔 a!anti role 〕⇰ 『   •   سنورێک بۆ سڕینەوەی ۳بۆ٤ رۆڵ』
 
 
 
-〔 a!anti roleD 〕⇰ 『  • سنورێک بۆ دروستکردنی ڕۆڵ ۳بۆ ٤   』
+〔 a!anti role 〕⇰ 『  • سنورێک بۆ دروستکردنی ڕۆڵ ۳بۆ ٤   』
 
 
 
@@ -747,5 +747,5 @@ fs.writeFile("./antibot.json", JSON.stringify(antibots), err => {
 });
 
 
-bot.login("");
+bot.login("NzA2MzA0MDg0MDEzMDg4Nzgw.XvBfRw.QgH4EcY7bC0fmxsZPgS1i7Q1eHE");
 
