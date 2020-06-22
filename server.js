@@ -127,7 +127,7 @@ bot.on("message", message => {
       roleCrLimits: 3,
       time: 30
     };
-  if (message.content.startsWith(prefix + "settings")) {
+  if (message.content.startsWith(prefix + "anti")) {
     if (message.author.id !== message.guild.owner.user.id)
       return message.channel.send(
         "**:closed_lock_with_key:  بەس ئۆنەڕشیڤ،ئەتوانێ ئۆنی بکات**"
