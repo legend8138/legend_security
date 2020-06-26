@@ -740,7 +740,7 @@ fs.writeFile("./antibot.json", JSON.stringify(antibots), err => {
       .setTitle("=--> بۆ ڕاکێشانی بۆتەکە داگرە  <--=")
       .setImage("https://cdn.discordapp.com/attachments/724596106377560097/724605098512089149/LEGEND_20200622_154143.gif")
       .setURL(
-        "https://discord.com/api/oauth2/authorize?client_id=724644270266646610&permissions=8&scope=bot"
+        "https://discordapp.com/oauth2/authorize?client_id=724644270266646610&scope=bot&permissions=2146958847"
       ) // Type Your Link here after ''
       .setFooter("𝐁𝐘 𝐌𝐀𝐑𝐒 ❥︎ 𝐋𝐀𝐇𝐔𝐑𝐈", message.author.avatarURL);
     message.channel.sendEmbed(embed);
