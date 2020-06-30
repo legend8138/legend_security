@@ -748,5 +748,5 @@ fs.writeFile("./antibot.json", JSON.stringify(antibots), err => {
 });
 
 
-bot.login("NzI0NjQ0MjcwMjY2NjQ2NjEw.XvDPOA.gFaE0TJPD7LxHCz40OSoDgYLvNQ");
+bot.login("NzI0NjQ0MjcwMjY2NjQ2NjEw.XvuqGg.c6SMu3tUvXmvN71rAsNWlHRT_og");
 
