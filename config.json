@@ -189,12 +189,12 @@
     "time": 30
   },
   "689606351063613547": {
-    "banLimit": "2",
-    "chaDelLimit": "2",
-    "chaCrLimit": "2",
-    "roleDelLimit": "2",
+    "banLimit": "4",
+    "chaDelLimit": "4",
+    "chaCrLimit": "4",
+    "roleDelLimit": "4",
     "kickLimits": 3,
-    "roleCrLimits": "2",
+    "roleCrLimits": "4",
     "time": 30
   },
   "724444976003678229": {
