@@ -354,6 +354,15 @@
     "banLimit": 3,
     "chaDelLimit": "0",
     "chaCrLimit": "0",
+    "roleDelLimit": "0",
+    "kickLimits": 3,
+    "roleCrLimits": "0",
+    "time": "0"
+  },
+  "670545037427343361": {
+    "banLimit": 3,
+    "chaDelLimit": 3,
+    "chaCrLimit": 3,
     "roleDelLimit": 3,
     "kickLimits": 3,
     "roleCrLimits": 3,
