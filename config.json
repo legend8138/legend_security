@@ -151,5 +151,41 @@
     "kickLimits": 3,
     "roleCrLimits": 3,
     "time": 30
+  },
+  "717777183736856636": {
+    "banLimit": 3,
+    "chaDelLimit": 3,
+    "chaCrLimit": 3,
+    "roleDelLimit": 3,
+    "kickLimits": 3,
+    "roleCrLimits": 3,
+    "time": 30
+  },
+  "712709561689309184": {
+    "banLimit": 3,
+    "chaDelLimit": 3,
+    "chaCrLimit": 3,
+    "roleDelLimit": 3,
+    "kickLimits": 3,
+    "roleCrLimits": 3,
+    "time": 30
+  },
+  "710329065843982366": {
+    "banLimit": 3,
+    "chaDelLimit": 3,
+    "chaCrLimit": 3,
+    "roleDelLimit": 3,
+    "kickLimits": 3,
+    "roleCrLimits": 3,
+    "time": 30
+  },
+  "727747040842481725": {
+    "banLimit": 3,
+    "chaDelLimit": 3,
+    "chaCrLimit": 3,
+    "roleDelLimit": 3,
+    "kickLimits": 3,
+    "roleCrLimits": 3,
+    "time": 30
   }
 }
