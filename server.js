@@ -104,6 +104,32 @@ bot.on("ready", () => {
   bot.user.setActivity("m!help | It's time to secure your server!", { type: "" });
   bot.user.setStatus("");
 });
+
+
+bot.on("ready", () => {
+console.log(
+`Online In Servers : ${bot.guilds.size} | Users : ${bot.users.size}`
+);
+let statuses = [
+///// لێرانە شتێک بووسە بۆ ستریمینگەکە
+//// DASTKARE MAKA DACHE BGYE BEKAYTA EROR BA WRYAYI DASKARII MAKA
+`Server ${bot.guilds.size}`,
+`m!help It's time to security`,
+``
+];
+setInterval(function() {
+let STREAMING = statuses[Math.floor(Math.random() * statuses.length)];
+bot.user.setActivity(STREAMING, { 
+type:"playing", 
+url: "https://www.twitch.tv/faith"
+});
+}, 2000);
+});
+
+
+
+
+
 let anti = JSON.parse(fs.readFileSync("./antigrefff.json", "UTF8"));
 let config = JSON.parse(fs.readFileSync("./server.json", "UTF8"));
 bot.on("message", message => {
