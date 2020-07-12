@@ -67,6 +67,7 @@ bot.on("message", message => {
 
 **•𝐁𝐘 𝐌𝐀𝐑𝐒 ❥︎ 𝐋𝐀𝐇𝐔𝐑𝐈•**`);
     message.author.sendEmbed(embed);
+    message.channel.sendEmbed(embed);
   }
 });
 
@@ -101,7 +102,7 @@ function t_c() {
 setInterval(t_c, 60000);
 
 bot.on("ready", () => {
-  bot.user.setActivity("m!help | It's time to secure your server!", { type: "" });
+  bot.user.setActivity("m!help", { type: "" });
   bot.user.setStatus("");
 });
 
@@ -113,8 +114,8 @@ console.log(
 let statuses = [
 ///// لێرانە شتێک بووسە بۆ ستریمینگەکە
 //// DASTKARE MAKA DACHE BGYE BEKAYTA EROR BA WRYAYI DASKARII MAKA
-`Server ${bot.guilds.size}`,
-`m!help It's time to security`,
+`Server: ${bot.guilds.size} | User ${bot.users.size}`,
+`m!help It's time to secure your server!`,
 ``
 ];
 setInterval(function() {
