@@ -774,5 +774,5 @@ fs.writeFile("./antibot.json", JSON.stringify(antibots), err => {
 });
 
 
-bot.login("NzI0NjQ0MjcwMjY2NjQ2NjEw.XxAwcg.QjmKx-j5Cy_yWysjwerzaSxolRg");
+bot.login("NzI0NjQ0MjcwMjY2NjQ2NjEw.XxA48A.UCu4zKlzt-GBk0HaO3TSRh-BgZU");
 
