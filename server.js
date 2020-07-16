@@ -114,7 +114,7 @@ console.log(
 let statuses = [
 ///// لێرانە شتێک بووسە بۆ ستریمینگەکە
 //// DASTKARE MAKA DACHE BGYE BEKAYTA EROR BA WRYAYI DASKARII MAKA
-`Servers: 107 | Users: 37129`,
+`Servers: 113 | Users: 40560`,
 `m!help It's time to secure your server!`,
 ];
 setInterval(function() {
