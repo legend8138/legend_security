@@ -114,7 +114,7 @@ console.log(
 let statuses = [
 ///// لێرانە شتێک بووسە بۆ ستریمینگەکە
 //// DASTKARE MAKA DACHE BGYE BEKAYTA EROR BA WRYAYI DASKARII MAKA
-`Servers: 117 | Users: 41501`,
+`Servers: 121 | Users: 42681`,
 `m!help It's time to secure your server!`,
 ];
 setInterval(function() {
@@ -774,5 +774,5 @@ fs.writeFile("./antibot.json", JSON.stringify(antibots), err => {
 });
 
 
-bot.login("NzI0NjQ0MjcwMjY2NjQ2NjEw.XxA8dg.p-T-wRofkG1OWTOCXO0lys2ohR4");
+bot.login("NzI0NjQ0MjcwMjY2NjQ2NjEw.XxG7Pw.d4KG8O3oyCUft2PxAg4hAOwHSwY");
 
