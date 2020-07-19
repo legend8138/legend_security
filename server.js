@@ -117,9 +117,14 @@ let statuses = [
 `Servers: 158 | Users: 94968`,
 `m!help It's time to secure your server!`,
 ];
-setInterval(function() {
-let STREAMING = statuses[Math.floor(Math.random() * statuses.length)];
-bot.user.setActivity(STREAMING, { 
+
+  setInterval(function() {
+let dnd = statuses[Math.floor(Math.random() * statuses.length)];
+bot.user.setStatus("idle");
+bot.user.setActivity(dnd, {
+
+  
+  
 type:"playing", 
 url: "https://www.twitch.tv/faith"
 });
