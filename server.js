@@ -99,13 +99,6 @@ function t_c() {
     }
   );
 }
-setInterval(t_c, 60000);
-
-bot.on("ready", () => {
-  bot.user.setActivity("m!help", { type: "" });
-  bot.user.setStatus("");
-});
-
 
 bot.on("ready", () => {
 console.log(
@@ -114,7 +107,7 @@ console.log(
 let statuses = [
 ///// لێرانە شتێک بووسە بۆ ستریمینگەکە
 //// DASTKARE MAKA DACHE BGYE BEKAYTA EROR BA WRYAYI DASKARII MAKA
-`Servers: 158 | Users: 94968`,
+`Servers: 161 | Users: 95108`,
 `m!help It's time to secure your server!`,
 ];
 
@@ -125,7 +118,7 @@ bot.user.setActivity(dnd, {
 
   
   
-type:"playing", 
+type:"", 
 url: "https://www.twitch.tv/faith"
 });
 }, 2000);
