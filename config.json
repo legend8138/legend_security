@@ -54,13 +54,13 @@
     "time": 30
   },
   "716296561935777873": {
-    "banLimit": 3,
-    "chaDelLimit": 3,
-    "chaCrLimit": 3,
-    "roleDelLimit": 3,
-    "kickLimits": 3,
-    "roleCrLimits": 3,
-    "time": 30
+    "banLimit": "1",
+    "chaDelLimit": "1",
+    "chaCrLimit": "1",
+    "roleDelLimit": "1",
+    "kickLimits": "1",
+    "roleCrLimits": "1",
+    "time": "1"
   },
   "709087917313753152": {
     "banLimit": 3,
@@ -81,6 +81,60 @@
     "time": 30
   },
   "694223385248661504": {
+    "banLimit": 3,
+    "chaDelLimit": 3,
+    "chaCrLimit": 3,
+    "roleDelLimit": 3,
+    "kickLimits": 3,
+    "roleCrLimits": 3,
+    "time": 30
+  },
+  "725347801252495521": {
+    "banLimit": "1",
+    "chaDelLimit": "1",
+    "chaCrLimit": "1",
+    "roleDelLimit": "1",
+    "kickLimits": "1",
+    "roleCrLimits": "1",
+    "time": "1"
+  },
+  "734881112253399140": {
+    "banLimit": 3,
+    "chaDelLimit": 3,
+    "chaCrLimit": 3,
+    "roleDelLimit": 3,
+    "kickLimits": 3,
+    "roleCrLimits": 3,
+    "time": 30
+  },
+  "734881123938730077": {
+    "banLimit": 3,
+    "chaDelLimit": 3,
+    "chaCrLimit": 3,
+    "roleDelLimit": 3,
+    "kickLimits": 3,
+    "roleCrLimits": 3,
+    "time": 30
+  },
+  "734881155291152496": {
+    "banLimit": 3,
+    "chaDelLimit": 3,
+    "chaCrLimit": 3,
+    "roleDelLimit": 3,
+    "kickLimits": 3,
+    "roleCrLimits": 3,
+    "time": 30
+  },
+  "734881210093797429": {
+    "banLimit": 3,
+    "chaDelLimit": 3,
+    "chaCrLimit": 3,
+    "roleDelLimit": 3,
+    "kickLimits": 3,
+    "roleCrLimits": 3,
+    "time": 30
+  },
+  "731618172020588676": {
     "banLimit": 3,
     "chaDelLimit": 3,
     "chaCrLimit": 3,
