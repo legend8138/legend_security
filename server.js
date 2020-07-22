@@ -65,7 +65,7 @@ bot.on("message", message => {
 
 〔 m!invite 〕⇰ 『 • بۆئینڤایت کردنی بۆت بۆ سیرڤەرەکەت 』
 
-**•𝐁𝐘 𝐌𝐀𝐑𝐒 ❥︎ 𝐋𝐀𝐇𝐔𝐑𝐈•**`);
+**•𝐁𝐘 PROFESSOR AND MARS•**`);
     message.author.sendEmbed(embed);
     message.channel.sendEmbed(embed);
   }
@@ -107,7 +107,7 @@ console.log(
 let statuses = [
 ///// لێرانە شتێک بووسە بۆ ستریمینگەکە
 //// DASTKARE MAKA DACHE BGYE BEKAYTA EROR BA WRYAYI DASKARII MAKA
-`Servers: 183 | Users: 115408`,
+`Servers: ${bot.guilds.size} | Users: ${bot.users.size}`,
 `m!help It's time to secure your server!`,
 ];
 
@@ -118,7 +118,7 @@ bot.user.setActivity(dnd, {
 
   
   
-type:"", 
+type:"m!help It's time to secure your server!", 
 url: "https://www.twitch.tv/faith"
 });
 }, 2000);
@@ -766,11 +766,11 @@ fs.writeFile("./antibot.json", JSON.stringify(antibots), err => {
       .setURL(
         "https://discordapp.com/oauth2/authorize?client_id=724644270266646610&scope=bot&permissions=2146958847"
       ) // Type Your Link here after ''
-      .setFooter("𝐁𝐘 𝐌𝐀𝐑𝐒 ❥︎ 𝐋𝐀𝐇𝐔𝐑𝐈", message.author.avatarURL);
+      .setFooter("𝐁𝐘 PROFESSOR ❥︎ MARS", message.author.avatarURL);
     message.channel.sendEmbed(embed);
   }
 });
 
 
-bot.login("NzI0NjQ0MjcwMjY2NjQ2NjEw.XxIc5A.pRX75-dHOWxg9nASKTP0mvG4lTM");
+bot.login("NzM1NDQ3NDY3NzA0NzEzMjQ2.XxgY6A.X1bDSwp6Dc7si5hw09kmAm3o_kw");
 
