@@ -27,52 +27,62 @@ bot.on("ready", () => console.log("🤖Ready Bot In Online🤖"));
 bot.on("message", message => {
   if (message.content === "m!help") {
     const embed = new Discord.RichEmbed().setColor("#000000")
-      .setDescription(`**زانیاری بۆتکە**
-👮|Protection Commands|👮 - کۆدی پارێزگاری : 
+      .setDescription(`**𝗖𝗼𝗺𝗺𝗻𝗱 𝗛𝗲𝗹𝗽 𝗠𝗲𝗻𝘂**
 
-
-〔 m!antibots on 〕⇰ 『 هیچ بۆت ئەک ناتوانی بێتە ناو سێرڤەر』
-
-
-
-〔 m!antibots off 〕⇰ 『بۆت دەتوانی بێنیە ناو سێرڤەر 』
+The prefix for the bot is: 𝗺!
 
 
 
-〔 m!anti ban 〕⇰ 『  • سنورێک بۆ باند کردن۳بۆ٤ کەس 』
+m!antibots no
+m!antibots off
+m!anti ban     [minimum][3 to 4]
+m!anti kick    [minimum][3 to 4]
+m!anti role    [minimum][3 to 4]
+m!anti channel [minimum][3 to 4]
+m!anti time    [minimum][3 to 4]
+m!about
+m!invite       
 
-
-
-〔 m!anti kick 〕⇰ 『 •  سنورێک بۆ کیک کردن۳بۆ٤ کەس』
-
-
-
-〔 m!anti role 〕⇰ 『   •   سنورێک بۆ سڕینەوەی ۳بۆ٤ رۆڵ』
-
-
-
-〔 m!anti role 〕⇰ 『  • سنورێک بۆ دروستکردنی ڕۆڵ ۳بۆ ٤   』
-
-
-
-〔 m!anti channel 〕⇰ 『 •سنورێک بۆ سڕینەوەی ۳بۆ٤ ڕووم بۆ ئەوکەسانەی پلەدارن』
-
-
-
-〔 m!anti time 〕⇰ 『 • ئه وكه سانه ى كه نه فه ر باند ده كه ن روليان ليده ستيندريته وه』
-
-
-
-〔 m!invite 〕⇰ 『 • بۆئینڤایت کردنی بۆت بۆ سیرڤەرەکەت 』
-
-**•𝐁𝐘 PROFESSOR AND MARS•**`);
-    message.author.sendEmbed(embed);
+`);
     message.channel.sendEmbed(embed);
   }
 });
 
 bot.on("ready", () => {
   console.log(`Logged in as ${bot.user.tag}!`);
+});
+
+
+bot.on("message", message => {
+if (message.content === "m!about") {
+const embed = new Discord.RichEmbed().setColor("#000000")
+.setAuthor(message.guild.name, message.guild.iconURL)
+.setDescription(`
+𝗡𝗮𝗺𝗲
+
+Security#0460
+
+𝗜𝗗
+
+724644270266646610
+
+𝗢𝘄𝗻𝗲𝗿
+
+!                           ᗰᗩᖇᔕ#7827
+
+𝗖𝗼 𝗢𝘄𝗻𝗲𝗿
+
+!       <𝐄/𝐖>        𝐋𝐀𝐇𝐔𝐑𝐈  📿#2789
+
+𝗛𝗲𝗹𝗽𝗲𝗿
+
+〆JANO#8888
+
+
+
+`);
+message.channel.sendEmbed(embed);
+}
 });
 
 bot.on("ready", () => {
@@ -107,13 +117,13 @@ console.log(
 let statuses = [
 ///// لێرانە شتێک بووسە بۆ ستریمینگەکە
 //// DASTKARE MAKA DACHE BGYE BEKAYTA EROR BA WRYAYI DASKARII MAKA
-`Servers: ${bot.guilds.size} | Users: ${bot.users.size}`,
+`Servers: ${bot.guilds.size}| Users: ${bot.users.size}`,
 `m!help It's time to secure your server!`,
 ];
 
   setInterval(function() {
 let dnd = statuses[Math.floor(Math.random() * statuses.length)];
-bot.user.setStatus("online");
+bot.user.setStatus("");
 bot.user.setActivity(dnd, {
 
   
@@ -154,69 +164,84 @@ bot.on("message", message => {
   if (message.content.startsWith(prefix + "anti")) {
     if (message.author.id !== message.guild.owner.user.id)
       return message.channel.send(
-        "**:closed_lock_with_key:  بەس ئۆنەڕشیڤ،ئەتوانێ ئۆنی بکات**"
+        "**:closed_lock_with_key:  Just Ownership can online **"
       );
     if (message.content.startsWith(prefix + "anti ban")) {
-      if (!num) return message.channel.send("**:1234: | ‎ژمارە  بنێرە ! **");
+      if (!num) return message.channel.send("**Please  number selector! **");
       if (isNaN(num))
-        return message.channel.send("**:1234: | تەنها ژمارە ! **");
+        return message.channel.send("**Just number ! **");
       config[message.guild.id].banLimit = num;
       message.channel.send(
-        `**:lock: | گۆڕا بۆ : ${config[message.guild.id].banLimit} **`
+        `**Anti ban settings has been updated,
+Enabled: true
+Minimum: ${config[message.guild.id].banLimit} **`
       );
     }
     if (message.content.startsWith(prefix + "anti kick")) {
-      if (!num) return message.channel.send("**:1234: | ‎ژمارە  بنێرە ! **");
+      if (!num) return message.channel.send("**Please  number selector! **");
       if (isNaN(num))
-        return message.channel.send("**:1234: | تەنها ژمارە ! **");
+        return message.channel.send("**Just number ! **");
       config[message.guild.id].kickLimits = num;
       message.channel.send(
-        `**:lock: | گۆڕا بۆ : ${config[message.guild.id].kickLimits}**`
+        `**Anti kick settings has been updated,
+Enabled: true
+Minimum: ${config[message.guild.id].kickLimits}**`
       );
     }
     if (message.content.startsWith(prefix + "anti role")) {
-      if (!num) return message.channel.send("**:1234: | ‎ژمارە  بنێرە ! **");
+      if (!num) return message.channel.send("**Please  number selector! **");
       if (isNaN(num))
-        return message.channel.send("**:1234: | تەنها ژمارە ! **");
+        return message.channel.send("**Just number ! **");
       config[message.guild.id].roleDelLimit = num;
       message.channel.send(
-        `**:lock: | گۆڕا بۆ : ${config[message.guild.id].roleDelLimit}**`
+        `**Anti role.C settings has been updated,
+Enabled: true
+Minimum: ${config[message.guild.id].roleDelLimit}**`
       );
     }
     if (message.content.startsWith(prefix + "anti role")) {
-      if (!num) return message.channel.send("**:1234: | ‎ژمارە  بنێرە ! **");
+      if (!num) return message.channel.send("**Please  number selector! **");
       if (isNaN(num))
-        return message.channel.send("**:1234: | تەنها ژمارە ! **");
+        return message.channel.send("**Just number ! **");
       config[message.guild.id].roleCrLimits = num;
       message.channel.send(
-        `**:lock: | گۆڕا بۆ : ${config[message.guild.id].roleCrLimits}**`
+        `**Anti role.D settings has been updated,
+Enabled: true
+Minimum: ${config[message.guild.id].roleCrLimits}**`
       );
     }
     if (message.content.startsWith(prefix + "anti channel")) {
-      if (!num) return message.channel.send("**:1234: | ‎ژمارە  بنێرە ! **");
+      if (!num) return message.channel.send("**Please  number selector! **");
       if (isNaN(num))
-        return message.channel.send("**:1234: | تەنها ژمارە ! **");
+        return message.channel.send("**Just number ! **");
       config[message.guild.id].chaDelLimit = num;
       message.channel.send(
-        `**:lock: | گۆڕا بۆ : ${config[message.guild.id].chaDelLimit}**`
+        `**Anti channel.C settings has been updated,
+Enabled: true
+Minimum: ${config[message.guild.id].chaDelLimit}**`
       );
     }
     if (message.content.startsWith(prefix + "anti channel")) {
-      if (!num) return message.channel.send("**:1234: | ‎ژمارە  بنێرە ! **");
+      if (!num) return message.channel.send("**Please  number selector! **");
       if (isNaN(num))
-        return message.channel.send("**:1234: | تەنها ژمارە ! **");
+        return message.channel.send("**Just number ! **");
       config[message.guild.id].chaCrLimit = num;
       message.channel.send(
-        `**:lock: | گۆڕا بۆ : ${config[message.guild.id].chaCrLimit}**`
+        `**Anti channel.D settings has been updated,
+Enabled: true
+Minimum: ${config[message.guild.id].chaCrLimit}**`
+        
       );
     }
     if (message.content.startsWith(prefix + "anti time")) {
-      if (!num) return message.channel.send("**:1234: | ‎ژمارە  بنێرە ! **");
+      if (!num) return message.channel.send("**Please  number selector! **");
       if (isNaN(num))
-        return message.channel.send("**:1234: | تەنها ژمارە ! **");
+        return message.channel.send("**Just number ! **");
       config[message.guild.id].time = num;
       message.channel.send(
-        `**:lock: | گۆڕا بۆ : ${config[message.guild.id].time}**`
+        `**Anti time settings has been updated,
+Enabled: true
+Minimum: ${config[message.guild.id].time}**`
       );
     }
   }
@@ -229,6 +254,7 @@ bot.on("message", message => {
 });
 bot.on("channelDelete", async channel => {
   const entry1 = await channel.guild
+  
     .fetchAuditLogs({
       type: "CHANNEL_DELETE"
     })
@@ -269,7 +295,7 @@ bot.on("channelDelete", async channel => {
         .ban()
         .catch(e =>
           channel.guild.owner.send(
-            `**⇏ | ${entry.username} ژوڕی زۆڕی سڕی وەتەوە **`
+            `**⇏ | ${entry.username}  :  is deleting channels on your server called , stop him before i take action!`
           )
         );
       anti[channel.guild.id + entry.id].actions = "0";
@@ -339,7 +365,7 @@ bot.on("channelCreate", async channel => {
         .ban()
         .catch(e =>
           channel.guild.owner.send(
-            `**⇏ | ${entry.username} ژوڕی زۆڕی دروست کردوە **`
+            `**⇏ | ${entry.username}  :  is creating channels on your server , stop him before i take action!**`
           )
         );
       anti[channel.guild.id + entry.id].actions = "0";
@@ -407,7 +433,7 @@ bot.on("roleDelete", async channel => {
         .ban()
         .catch(e =>
           channel.guild.owner.send(
-            `**⇏ | ${entry.username} ‎ڕۆلی زۆڕی سڕیوەتەو **`
+            `**⇏ | ${entry.username}  :  is deleting roles on your server called , stop him before i take action!`
           )
         );
       anti[channel.guild.id + entry.id].actions = "0";
@@ -474,7 +500,7 @@ bot.on("roleCreate", async channel => {
         .ban()
         .catch(e =>
           channel.guild.owner.send(
-            `**⇏ | ${entry.username} ڕۆڵی زۆڕدڕوست  کڕدوە **`
+            `**⇏ | ${entry.username}  :  is creating roles on your server called , stop him before i take action!`
           )
         );
       anti[channel.guild.id + entry.id].actions = "0";
@@ -536,7 +562,7 @@ bot.on("guildBanAdd", async (guild, user) => {
         .get(entry.id)
         .ban()
         .catch(e =>
-          guild.owner.send(`**⇏ | ${entry.username} هەوڵی داهەموان باند بکا **`)
+          guild.owner.send(`**⇏ | ${entry.username} Tried to ban **`)
         );
       anti[guild.id + entry.id].actions = 0;
       fs.writeFile("./config.json", JSON.stringify(config, null, 2), function(
@@ -598,7 +624,7 @@ bot.on("guildKickAdd", async (guild, user) => {
         .get(entry.id)
         .ban()
         .catch(e =>
-          guild.owner.send(`**⇏ | ${entry.username} هەوڵی داهەموان کیک کا **`)
+          guild.owner.send(`**⇏ | ${entry.username} Tried to kick **`)
         );
       anti[guild.id + entry.id].actions = 0;
       fs.writeFile("./config.json", JSON.stringify(config, null, 2), function(
@@ -667,7 +693,7 @@ bot.on("guildMemberRemove", async member => {
           .ban()
           .catch(e =>
             member.owner.send(
-              `**⇏ | ${entry.username} هەوڵی داهەموان کیک کا **`
+              `**⇏ | ${entry.username} Tried to kick **`
             )
           );
         anti[member.guild.id + entry.id].actions = 0;
@@ -706,7 +732,7 @@ bot.on("message", message => {
       onoff: "On"
     };
     message.channel.send(
-      `**‎✅ **__بە سەرکەوتوانە ئێستا بۆت ناتوانێ جۆین سێرڤەر بێت__`
+      `You have enabled anti bot!`
     );
     fs.writeFile("./antibot.json", JSON.stringify(antibots), err => {
       if (err)
@@ -726,7 +752,7 @@ bot.on("message", message => {
       onoff: "Off"
     };
     message.channel.send(
-      `**✅ __بە سەرکەوتوانە ئێستا بۆت دەتوانی جۆین ی سێرڤەر بکات__**`
+      `You have disabled anti bot!`
     );
     fs.writeFile("./antibot.json", JSON.stringify(antibots), err => {
       if (err)
@@ -761,16 +787,15 @@ fs.writeFile("./antibot.json", JSON.stringify(antibots), err => {
       );
     let embed = new Discord.RichEmbed()
       .setColor("GREEN")
-      .setTitle("=--> بۆ ڕاکێشانی بۆتەکە داگرە  <--=")
-      .setImage("https://cdn.discordapp.com/attachments/724596106377560097/724605098512089149/LEGEND_20200622_154143.gif")
+      .setTitle("=--> click touch for link bot <--=")
       .setURL(
         "https://discordapp.com/oauth2/authorize?client_id=724644270266646610&scope=bot&permissions=2146958847"
       ) // Type Your Link here after ''
-      .setFooter("𝐁𝐘 PROFESSOR ❥︎ MARS", message.author.avatarURL);
+      .setFooter("", message.author.avatarURL);
     message.channel.sendEmbed(embed);
   }
 });
 
 
-bot.login("NzM1NDQ3NDY3NzA0NzEzMjQ2.XxgY6A.X1bDSwp6Dc7si5hw09kmAm3o_kw");
+bot.login("");
 
