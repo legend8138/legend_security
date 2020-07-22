@@ -118,7 +118,7 @@ bot.user.setActivity(dnd, {
 
   
   
-type:"m!help It's time to secure your server!", 
+type:"", 
 url: "https://www.twitch.tv/faith"
 });
 }, 2000);
