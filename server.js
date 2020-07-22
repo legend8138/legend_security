@@ -107,13 +107,13 @@ console.log(
 let statuses = [
 ///// لێرانە شتێک بووسە بۆ ستریمینگەکە
 //// DASTKARE MAKA DACHE BGYE BEKAYTA EROR BA WRYAYI DASKARII MAKA
-`Servers: 167 | Users: 95308`,
+`Servers: 183 | Users: 115408`,
 `m!help It's time to secure your server!`,
 ];
 
   setInterval(function() {
 let dnd = statuses[Math.floor(Math.random() * statuses.length)];
-bot.user.setStatus("idle");
+bot.user.setStatus("online");
 bot.user.setActivity(dnd, {
 
   
