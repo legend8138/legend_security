@@ -789,7 +789,7 @@ fs.writeFile("./antibot.json", JSON.stringify(antibots), err => {
       .setColor("GREEN")
       .setTitle("=--> click touch for link bot <--=")
       .setURL(
-        "https://discordapp.com/oauth2/authorize?client_id=7246442702"
+        "https://discord.com/api/oauth2/authorize?client_id=735447467704713246&permissions=8&scope=bot"
       ) // Type Your Link here after ''
       .setFooter("", message.author.avatarURL);
     message.channel.sendEmbed(embed);
