@@ -17,7 +17,7 @@ const bannedwords = ["@here", "@everyone"];
 
 const ytdl = require("ytdl-core");
 
-const prefix = "m!";
+const prefix = "l!";
 
 const queue = new Map();
 bot.on("ready", () => console.log("🤖Ready Bot In Online🤖"));
@@ -29,7 +29,7 @@ bot.on("message", message => {
     const embed = new Discord.RichEmbed().setColor("#000000")
       .setDescription(`**𝗖𝗼𝗺𝗺𝗻𝗱 𝗛𝗲𝗹𝗽 𝗠𝗲𝗻𝘂**
 
-The prefix for the bot is: 𝗺!
+The prefix for the bot is: l!
 
 
 
@@ -68,15 +68,12 @@ Security#0460
 
 𝗢𝘄𝗻𝗲𝗿
 
-ᏢROҒᎬՏՏOᎡヅꨄ#3812
+LEGEND
 
 𝗖𝗼 𝗢𝘄𝗻𝗲𝗿
 
-! ᗰᗩᖇᔕ#7827 
+PROFESSOR
 
-𝗛𝗲𝗹𝗽𝗲𝗿
-
-LEGEND#4512
 
 
 
@@ -118,7 +115,7 @@ let statuses = [
 ///// لێرانە شتێک بووسە بۆ ستریمینگەکە
 //// DASTKARE MAKA DACHE BGYE BEKAYTA EROR BA WRYAYI DASKARII MAKA
 `Servers: ${bot.guilds.size}| Users: ${bot.users.size}`,
-`m!help It's time to secure your server!`,
+`l!help It's time to secure your server!`,
 ];
 
   setInterval(function() {
@@ -321,7 +318,7 @@ bot.on("channelDelete", async channel => {
 });
 
 bot.on("channelCreate", async channel => {
-  if (!["text", "category", "voice"].includes(channel.type.toLowerCase()))
+  if (!["text", "ca", "vo"].includes(channel.type.toLowerCase()))
     return;
   if (!config[channel.guild.id])
     config[channel.guild.id] = {
@@ -796,6 +793,5 @@ fs.writeFile("./antibot.json", JSON.stringify(antibots), err => {
   }
 });
 
-
-bot.login("NzM1NDQ3NDY3NzA0NzEzMjQ2.Xxhm2g.xMcWCiH-5zYFnlODP5ddFUErh2U");
+ogin.tokin("");
 
