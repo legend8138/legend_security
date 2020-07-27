@@ -793,5 +793,5 @@ fs.writeFile("./antibot.json", JSON.stringify(antibots), err => {
   }
 });
 
-ogin.tokin("");
+bot.login(process.env.MARS);
 
