@@ -25,7 +25,7 @@ bot.on("ready", () => console.log("🤖Ready Bot In Online🤖"));
 
 
 bot.on("message", message => {
-  if (message.content === "m!help") {
+  if (message.content === "l!help") {
     const embed = new Discord.RichEmbed().setColor("#000000")
       .setDescription(`**𝗖𝗼𝗺𝗺𝗻𝗱 𝗛𝗲𝗹𝗽 𝗠𝗲𝗻𝘂**
 
