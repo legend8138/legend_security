@@ -777,7 +777,7 @@ fs.writeFile("./antibot.json", JSON.stringify(antibots), err => {
 
 
   bot.on("message", message => {
-  if (message.content === "m!invite") {
+  if (message.content === "l!invite") {
     if (!message.channel.guild)
       return message.reply(
         "Please Do not type bot commands in bot private chat"
