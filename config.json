@@ -9,7 +9,7 @@
     "time": 30
   },
   "727609456082419763": {
-    "banLimit": 3,
+    "banLimit": "1",
     "chaDelLimit": 3,
     "chaCrLimit": 3,
     "roleDelLimit": 3,
