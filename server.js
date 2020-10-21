@@ -17,7 +17,7 @@ const bannedwords = ["@here", "@everyone"];
 
 const ytdl = require("ytdl-core");
 
-const prefix = "l!";
+const prefix = "p!";
 
 const queue = new Map();
 bot.on("ready", () => console.log("🤖Ready Bot In Online🤖"));
@@ -25,23 +25,23 @@ bot.on("ready", () => console.log("🤖Ready Bot In Online🤖"));
 
 
 bot.on("message", message => {
-  if (message.content === "l!help") {
+  if (message.content === "p!help") {
     const embed = new Discord.RichEmbed().setColor("#000000")
       .setDescription(`**𝗖𝗼𝗺𝗺𝗻𝗱 𝗛𝗲𝗹𝗽 𝗠𝗲𝗻𝘂**
 
-The prefix for the bot is: l!
+The prefix for the bot is: p!
 
 
 
-m!antibots no
-m!antibots off
-m!anti ban     [minimum][3 to 4]
-m!anti kick    [minimum][3 to 4]
-m!anti role    [minimum][3 to 4]
-m!anti channel [minimum][3 to 4]
-m!anti time    [minimum][3 to 4]
-m!about
-m!invite       
+p!antibots no
+p!antibots off
+p!anti ban     [minimum][3 to 4]
+p!anti kick    [minimum][3 to 4]
+p!anti role    [minimum][3 to 4]
+p!anti channel [minimum][3 to 4]
+p!anti time    [minimum][3 to 4]
+p!about
+p!invite       
 
 `);
     message.channel.sendEmbed(embed);
@@ -54,7 +54,7 @@ bot.on("ready", () => {
 
 
 bot.on("message", message => {
-if (message.content === "m!about") {
+if (message.content === "p!about") {
 const embed = new Discord.RichEmbed().setColor("#000000")
 .setAuthor(message.guild.name, message.guild.iconURL)
 .setDescription(`
@@ -67,12 +67,12 @@ Security#0460
 682146815017222150
 
 𝗢𝘄𝗻𝗲𝗿
+PROFESSOR
 
-LEGEND
 
 𝗖𝗼 𝗢𝘄𝗻𝗲𝗿
 
-PROFESSOR
+
 
 
 
@@ -115,7 +115,7 @@ let statuses = [
 ///// لێرانە شتێک بووسە بۆ ستریمینگەکە
 //// DASTKARE MAKA DACHE BGYE BEKAYTA EROR BA WRYAYI DASKARII MAKA
 `Servers: ${bot.guilds.size}| Users: ${bot.users.size}`,
-`l!help It's time to secure your server!`,
+`p!help It's time to secure your server!`,
 ];
 
   setInterval(function() {
@@ -777,7 +777,7 @@ fs.writeFile("./antibot.json", JSON.stringify(antibots), err => {
 
 
   bot.on("message", message => {
-  if (message.content === "l!invite") {
+  if (message.content === "p!invite") {
     if (!message.channel.guild)
       return message.reply(
         "Please Do not type bot commands in bot private chat"
@@ -786,7 +786,7 @@ fs.writeFile("./antibot.json", JSON.stringify(antibots), err => {
       .setColor("GREEN")
       .setTitle("=--> click touch for link bot <--=")
       .setURL(
-        "https://discord.com/api/oauth2/authorize?client_id=735447467704713246&permissions=8&scope=bot"
+        "https://discord.com/api/oauth2/authorize?client_id=767190881689272330&permissions=8&scope=bot"
       ) // Type Your Link here after ''
       .setFooter("", message.author.avatarURL);
     message.channel.sendEmbed(embed);
