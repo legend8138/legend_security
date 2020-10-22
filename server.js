@@ -822,7 +822,7 @@ bot.on('message', message => {
 
  
 
-**🤖NAME BOT**
+**🤖 NAME BOT **
 <@767190881689272330>
 
  
@@ -851,6 +851,43 @@ bot.on('message', message => {
 
 
 
+/*bot.on("message", message => {
+  if(message.author.bot) return;
+    var spl = message.content.split(" ");
+  if(spl[0] == "p!cmd") {
+let embed = new Discord.RichEmbed()
+.setColor('#070706')
+.addField(`Discord Uptime Bot Help System`, `Your Discord Bots are Thanks to Me 24/7`)
+.setDescription(`**Commands**
+
+ ⚡ **u!avatar**    | **__Checks how show phto profile __**
+
+ ⚡ **u!kick**        |**__ Checks how kick user__**
+
+ ⚡ **u!ban**         | **__Checks how band user__**
+
+ ⚡ **u!mute**      |** __how to mute member user__**
+
+ ⚡ **u!verify**     |** __how tow verifyed bot__**
+
+ ⚡ **u!pro**         |**__how to show profile__**
+
+ ⚡ **u!unban**    |** __how to unban membrs__**
+
+ ⚡ **u!move**     | **__how to move mebmer__**
+
+ ⚡ **u!mvall**           | **__how to move all memers__**
+
+ ⚡ **u!moreinfo**    | **__how to show info server__**
+
+
+`)
+.setAuthor(`Uptime`, bot .user.avatarURL)
+.setFooter(`Uptime Bot | Coded by Emir Bolat,  by !   𝐃 ❦ 𝐑 𝐊.`, bot .user.avatarURL)
+return message.channel.send(embed);
+    }
+ 
+})*/
 
 bot.login("NzY3MTkwODgxNjg5MjcyMzMw.X4uULw.5CLp6_kY2chmygROXpfHT2Yrr-I");
 
