@@ -32,16 +32,22 @@ bot.on("message", message => {
 The prefix for the bot is: p!
 
 
-
-p!antibots no
-p!antibots off
-p!anti ban     [minimum][3 to 4]
-p!anti kick    [minimum][3 to 4]
-p!anti role    [minimum][3 to 4]
-p!anti channel [minimum][3 to 4]
-p!anti time    [minimum][3 to 4]
-p!about
-p!invite       
+|✨| **p!antibots **__on__
+|✨| **p!antibots off
+++++++++++++++++++++++++++++++++++
+|✨| **p!anti ban     [minimum][3 to 4]**
+|✨| **p!anti kick    [minimum][3 to 4]**
+++++++++++++++++++++++++++++++++++
+|✨| **p!anti role    [__minimum__][__3 to 4__]**
+++++++++++++++++++++++++++++++++++
+|✨| **p!anti channel [minimum][__3 to 4__]**
+++++++++++++++++++++++++++++++++++
+|✨| **p!anti time    [__minimum][__3 to 4__]**
+++++++++++++++++++++++++++++++++++
+|✨| **p!about**
+++++++++++++++++++++++++++++++++++
+|✨| **p!invite **  
+++++++++++++++++++++++++++++++++++
 
 `);
     message.channel.sendEmbed(embed);
@@ -793,5 +799,5 @@ fs.writeFile("./antibot.json", JSON.stringify(antibots), err => {
   }
 });
 
-bot.login(process.env.MARS);
+bot.login("NzY3MTkwODgxNjg5MjcyMzMw.X4uULw.5CLp6_kY2chmygROXpfHT2Yrr-I");
 
