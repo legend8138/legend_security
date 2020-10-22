@@ -28,7 +28,7 @@ bot.on("message", message => {
   if (message.content === "p!help") {
     const embed = new Discord.RichEmbed().setColor("#000000")
       .setDescription(`**📝 𝗖𝗼𝗺𝗺𝗻𝗱 𝗛𝗲𝗹𝗽 𝗠𝗲𝗻𝘂**
-
+ 
 🤖 **The prefix for the bot is: ** __p!__ 🤖
 
 
@@ -51,9 +51,13 @@ bot.on("message", message => {
 |✨| p!bot 
 ++++++++++++++++++++++++++++++++++**
 
-
-`);
+`)
+.setAuthor(`Max Bot `, bot.user.avatarURL)
+.setFooter(`max bot | Coded by Emir Bolat, by ᵏᵃᵏ PrOfEsSoR🇨🇳.`, bot.user.avatarURL)
+return message.channel.send(embed);
+     
     message.channel.sendEmbed(embed);
+     
   }
 });
 
@@ -818,8 +822,8 @@ bot.on('message', message => {
 
  
 
-**🤖NAME BOt**
-<@768216048855154699>
+**🤖NAME BOT**
+<@767190881689272330>
 
  
 
