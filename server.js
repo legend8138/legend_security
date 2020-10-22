@@ -27,27 +27,29 @@ bot.on("ready", () => console.log("🤖Ready Bot In Online🤖"));
 bot.on("message", message => {
   if (message.content === "p!help") {
     const embed = new Discord.RichEmbed().setColor("#000000")
-      .setDescription(`**𝗖𝗼𝗺𝗺𝗻𝗱 𝗛𝗲𝗹𝗽 𝗠𝗲𝗻𝘂**
+      .setDescription(`**📝 𝗖𝗼𝗺𝗺𝗻𝗱 𝗛𝗲𝗹𝗽 𝗠𝗲𝗻𝘂**
 
-The prefix for the bot is: p!
+✅ **The prefix for the bot is: ** __p!__
 
 
-|✨| **p!antibots **__on__
-|✨| **p!antibots off
+**|✨|  p!antibots __on__
+|✨| p!antibots off
 ++++++++++++++++++++++++++++++++++
-|✨| **p!anti ban     [minimum][3 to 4]**
-|✨| **p!anti kick    [minimum][3 to 4]**
+|✨| p!anti ban     [minimum][3 to 4]
+|✨| p!anti kick    [minimum][3 to 4]
 ++++++++++++++++++++++++++++++++++
-|✨| **p!anti role    [__minimum__][__3 to 4__]**
+|✨| p!anti role    [minimum][3 to 4]
 ++++++++++++++++++++++++++++++++++
-|✨| **p!anti channel [minimum][__3 to 4__]**
+|✨| p!anti channel [minimum][3 to 4]
 ++++++++++++++++++++++++++++++++++
-|✨| **p!anti time    [__minimum][__3 to 4__]**
+|✨| p!anti time    [minimum][3 to 4]
 ++++++++++++++++++++++++++++++++++
-|✨| **p!about**
+|✨| p!about
 ++++++++++++++++++++++++++++++++++
-|✨| **p!invite **  
-++++++++++++++++++++++++++++++++++
+|✨| p!invite   
+++++++++++++++++++++++++++++++++++**
+
+<:dark:768911244148867072>
 
 `);
     message.channel.sendEmbed(embed);
