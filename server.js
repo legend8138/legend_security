@@ -29,27 +29,28 @@ bot.on("message", message => {
     const embed = new Discord.RichEmbed().setColor("#000000")
       .setDescription(`**📝 𝗖𝗼𝗺𝗺𝗻𝗱 𝗛𝗲𝗹𝗽 𝗠𝗲𝗻𝘂**
 
-✅ **The prefix for the bot is: ** __p!__
+🤖 **The prefix for the bot is: ** __p!__ 🤖
 
 
-**|✨|  p!antibots __on__
-|✨| p!antibots off
+**|❶|  p!antibots __on__
+|❶ | p!antibots __off__
 ++++++++++++++++++++++++++++++++++
-|✨| p!anti ban     [minimum][3 to 4]
-|✨| p!anti kick    [minimum][3 to 4]
+|❷| p!anti ban     [minimum][3 to 4]
+|❷| p!anti kick    [minimum][3 to 4]
 ++++++++++++++++++++++++++++++++++
-|✨| p!anti role    [minimum][3 to 4]
+|❸| p!anti role    [minimum][3 to 4]
 ++++++++++++++++++++++++++++++++++
-|✨| p!anti channel [minimum][3 to 4]
+|❹| p!anti channel [minimum][3 to 4]
 ++++++++++++++++++++++++++++++++++
-|✨| p!anti time    [minimum][3 to 4]
+|❺| p!anti time    [minimum][3 to 4]
 ++++++++++++++++++++++++++++++++++
-|✨| p!about
+|📝| p!about
 ++++++++++++++++++++++++++++++++++
 |✨| p!invite   
+++++++++++++++++++++++++++++++++++
+|✨| p!bot 
 ++++++++++++++++++++++++++++++++++**
 
-<:dark:768911244148867072>
 
 `);
     message.channel.sendEmbed(embed);
@@ -800,6 +801,52 @@ fs.writeFile("./antibot.json", JSON.stringify(antibots), err => {
     message.channel.sendEmbed(embed);
   }
 });
+
+
+
+
+bot.on('message', message => {
+
+    if(message.content === "p!bot") {
+ 
+     const embed = new Discord.RichEmbed()
+
+        .setImage("https://cdn.discordapp.com/attachments/696796419595567108/741981480653291570/image0-40.gif")
+        .setColor("RANDOM")
+
+        .setDescription(`
+
+ 
+
+**🤖NAME BOt**
+<@768216048855154699>
+
+ 
+
+**Servers**🌐 **__${bot.guilds.size}__**
+
+**Users**  👥 **__${bot.users.size}__**
+
+**Channels**📚 **__${bot.channels.size}__**
+
+**🤴OwnerBot**
+<@682146815017222150>
+ 
+**🤖coder Bot**
+<@539468591884664845>
+ 
+ 
+
+`)
+
+               message.channel.sendEmbed(embed);
+
+           }
+
+});
+
+
+
 
 bot.login("NzY3MTkwODgxNjg5MjcyMzMw.X4uULw.5CLp6_kY2chmygROXpfHT2Yrr-I");
 
