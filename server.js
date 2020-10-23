@@ -83,9 +83,6 @@ Security#0460
 PROFESSOR
 
 
-𝗖𝗼 𝗢𝘄𝗻𝗲𝗿
-
-
 
 
 
