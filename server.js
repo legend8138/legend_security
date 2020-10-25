@@ -849,6 +849,54 @@ bot.on('message', message => {
 
 });
 
+
+
+
+
+
+
+bot.on("message", message => {
+let ToOFaN
+if (message.content === "p!lock") {
+if (!message.channel.guild)
+return message.reply("This command is only for servers");
+if (!message.member.hasPermission("MANAGE_MESSAGES"))
+return message.reply("<a:righth:759903066563543090> Sorry you don't have `MANAGE MESSAGES` permissions");
+message.channel
+.overwritePermissions(message.guild.id, {
+SEND_MESSAGES: false
+})
+.then(() => {
+message.reply("**🔒 locked channel 🔒**");
+});
+}
+
+if (message.content === "p!unlock") {
+if (!message.channel.guild)
+return message.reply("** This command is only for servers**");
+if (!message.member.hasPermission("MANAGE_MESSAGES"))
+return message.reply("**__توانات نیە بیکەیتەوە چونکە ڕۆڵەکەی تۆ ```MANAGE_MESSAGES``پێ نیە**");
+message.channel
+.overwritePermissions(message.guild.id, {
+SEND_MESSAGES: true
+})
+.then(() => {
+message.reply("**🔓 Unlocked Channel🔓 **");
+});
+}
+});
+
+
+
+
+
+
+
+
+
+
+
+
 bot.on('message', message => {
 	if (message.author.bot) return;
 	if (!message.content.startsWith(prefix)) return;
@@ -896,23 +944,21 @@ bot.on('message', message => {
 **<a:dark22:744205831981236314> {Secuirty Commands} <a:dark22:744205831981236314>**
 
 =====================**
-<a:righth:759903066563543090>D!anti kick     3 
-<a:righth:759903066563543090>D!anti ban      3 
+<a:righth:759903066563543090>p!anti kick     3 
+<a:righth:759903066563543090>p!anti ban      3 
 =====================
-<a:righth:759903066563543090>D!anti roleC    3 
-<a:righth:759903066563543090>D!anti roleD    3 
+<a:righth:759903066563543090>p!anti role   3 
 =====================
-<a:righth:759903066563543090>D!anti channelC   3 
-<a:righth:759903066563543090>D!anti channelD   3 
+<a:righth:759903066563543090>p!anti channel   3 
 =====================
-<a:righth:759903066563543090>D!anti bot on   3 
-<a:righth:759903066563543090>D!anti bot off    3 
+<a:righth:759903066563543090>panti bot on   3 
+<a:righth:759903066563543090>p!anti bot off    3 
 =====================
-<a:righth:759903066563543090>D!set time  0.1 
+<a:righth:759903066563543090>p!set time  0.1 
 =====================
-<a:righth:759903066563543090>D!stats
+<a:righth:759903066563543090>p!stats
 =====================
-<a:righth:759903066563543090>D!anti invite**
+<a:righth:759903066563543090>p! invite**
 =====================
 `)
 					.setFooter(message.author.username, message.author.avatarURL)
@@ -933,33 +979,19 @@ bot.on('message', message => {
 
 ==================
 **
-<a:righth:759903066563543090>D!lock / D!unlock 
+<a:righth:759903066563543090>p!lock / p!unlok
 ===================
-<a:righth:759903066563543090>D!view / D!unview
+<a:righth:759903066563543090>p!verify
 ===================
-<a:righth:759903066563543090>D!move all 
+<a:righth:759903066563543090>p!
 ===================
-<a:righth:759903066563543090>D!clear
+<a:righth:759903066563543090>p!
 ===================
-<a:righth:759903066563543090>D!server
+<a:righth:759903066563543090>p!
 ===================
-<a:righth:759903066563543090>D!all bots 
+<a:righth:759903066563543090>p!
 ===================
-<a:righth:759903066563543090>D!report
-===================
-<a:righth:759903066563543090>D!bot voice
-===================
-<a:righth:759903066563543090>D!bot
-===================
-<a:righth:759903066563543090>D!color
-===================
-<a:righth:759903066563543090>!avatar
-===================
-<a:righth:759903066563543090>D!list bot
-===================
-<a:righth:759903066563543090>D!id
-===================
-<a:righth:759903066563543090>Auto @-everyone
+<a:righth:759903066563543090>p!
 ===================**`)
 					.setFooter(message.author.username, message.author.avatarURL)
 					.setTimestamp();
@@ -978,15 +1010,15 @@ bot.on('message', message => {
  ** <a:dark22:744205831981236314> { INFO HELP ANTI }** <a:dark22:744205831981236314>
 
 ===================
-<a:righth:759903066563543090> **D!help-ban
+<a:righth:759903066563543090> **p!help-ban
 ===================
-<a:righth:759903066563543090> D!help-kick
+<a:righth:759903066563543090> p!help-kick
 ===================
-<a:righth:759903066563543090> D!help-role
+<a:righth:759903066563543090> p!help-role
 ===================
-<a:righth:759903066563543090> D!help-channel
+<a:righth:759903066563543090> p!help-channel
 ===================
-<a:righth:759903066563543090> D!help-bot**
+<a:righth:759903066563543090> p!help-bot**
 ===================
 
 `)
@@ -1000,50 +1032,28 @@ bot.on('message', message => {
 });
 
 
-/*bot.on("message", message => {
-  if(message.author.bot) return;
-    var spl = message.content.split(" ");
-  if(spl[0] == "p!cmd") {
-let embed = new Discord.RichEmbed()
-.setColor('#070706')
-.addField(`Discord Uptime Bot Help System`, `Your Discord Bots are Thanks to Me 24/7`)
-.setDescription(`**Commands**
-
- ⚡ **u!avatar**    | **__Checks how show phto profile __**
-
- ⚡ **u!kick**        |**__ Checks how kick user__**
-
- ⚡ **u!ban**         | **__Checks how band user__**
-
- ⚡ **u!mute**      |** __how to mute member user__**
-
- ⚡ **u!verify**     |** __how tow verifyed bot__**
-
- ⚡ **u!pro**         |**__how to show profile__**
-
- ⚡ **u!unban**    |** __how to unban membrs__**
-
- ⚡ **u!move**     | **__how to move mebmer__**
-
- ⚡ **u!mvall**           | **__how to move all memers__**
-
- ⚡ **u!moreinfo**    | **__how to show info server__**
 
 
-`)
-.setAuthor(`Uptime`, bot .user.avatarURL)
-.setFooter(`Uptime Bot | Coded by Emir Bolat,  by !   𝐃 ❦ 𝐑 𝐊.`, bot .user.avatarURL)
-return message.channel.send(embed);
-    }
- 
-})*/
+bot.on('message', async message => {
+	if (message.content === 'p!verify') {
+    let embed = new Discord.RichEmbed()
+    .setDescription('max bot vote !!! ✅ ')
+    .setColor('RANDOM')
+    .setTimestamp()
+		const reactmessage = await message.channel.send(embed);
+		await reactmessage.react('✅');
 
+		const filter = (reaction, user) => reaction.emoji.name === '✅' && !user.bot;
+		const collector = reactmessage.createReactionCollector(filter, { time: 15000 });
 
-
-
-
-
-
+		collector.on('collect', async reaction => {
+			const user = reaction.users.last();
+			const guild = reaction.message.guild;
+			const member = guild.member(user) || await guild.fetchMember(user);
+			member.addRole(message.roleid);  //config
+		});
+	}
+});
 
 
 
