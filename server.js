@@ -958,7 +958,7 @@ bot.on('message', message => {
 =====================
 <a:righth:759903066563543090>p!stats
 =====================
-<a:righth:759903066563543090>p! invite**
+<a:righth:759903066563543090>p!invite**
 =====================
 `)
 					.setFooter(message.author.username, message.author.avatarURL)
@@ -983,11 +983,11 @@ bot.on('message', message => {
 ===================
 <a:righth:759903066563543090>p!verify
 ===================
-<a:righth:759903066563543090>p!
+<a:righth:759903066563543090>p!bot
 ===================
-<a:righth:759903066563543090>p!
+<a:righth:759903066563543090>p!id
 ===================
-<a:righth:759903066563543090>p!
+<a:righth:759903066563543090>p!about
 ===================
 <a:righth:759903066563543090>p!
 ===================
@@ -1010,15 +1010,15 @@ bot.on('message', message => {
  ** <a:dark22:744205831981236314> { INFO HELP ANTI }** <a:dark22:744205831981236314>
 
 ===================
-<a:righth:759903066563543090> **p!help-ban
+<a:righth:759903066563543090>**auro logs channel ( logs )
 ===================
-<a:righth:759903066563543090> p!help-kick
+<a:righth:759903066563543090>
 ===================
-<a:righth:759903066563543090> p!help-role
+<a:righth:759903066563543090>
 ===================
-<a:righth:759903066563543090> p!help-channel
+<a:righth:759903066563543090>
 ===================
-<a:righth:759903066563543090> p!help-bot**
+<a:righth:759903066563543090>
 ===================
 
 `)
@@ -1054,6 +1054,338 @@ bot.on('message', async message => {
 		});
 	}
 });
+
+
+
+
+
+
+
+
+
+
+bot.on("voiceStateUpdate", (oldM, newM) => {
+  let m1 = oldM.serverMute;
+  let m2 = newM.serverMute;
+  let d1 = oldM.serverDeaf;
+  let d2 = newM.serverDeaf;
+
+  let ch = oldM.guild.channels.find("name", "logs");
+  if (!ch) return;
+
+  oldM.guild.fetchAuditLogs().then(logs => {
+    let user = logs.entries.first().executor.username;
+
+    if (m1 === false && m2 === true) {
+      let embed = new Discord.RichEmbed()
+        .setAuthor(`${newM.user.tag}`, newM.user.avatarURL)
+        .setDescription(` ${user} میوتی فۆیس کرا     ${newM} `)
+        .setColor("#36393e")
+        .setTimestamp();
+      ch.send(embed);
+    }
+    if (m1 === true && m2 === false) {
+      let embed = new Discord.RichEmbed()
+        .setAuthor(`${newM.user.tag}`, newM.user.avatarURL)
+        .setDescription(` ${user}  میوتی ڤۆیسی کرایەوە  ${newM} `)
+        .setColor("#36393e")
+        .setTimestamp();
+      ch.send(embed);
+    }
+    if (d1 === false && d2 === true) {
+      let embed = new Discord.RichEmbed()
+        .setAuthor(`${newM.user.tag}`, newM.user.avatarURL)
+        .setDescription(` ${user}  دیفێندی ڤۆیس کرا    ${newM}`)
+        .setColor("#36393e")
+        .setTimestamp();
+
+      ch.send(embed);
+    }
+    if (d1 === true && d2 === false) {
+      let embed = new Discord.RichEmbed()
+        .setAuthor(`${newM.user.tag}`, newM.user.avatarURL)
+        .setDescription(` ${user}   دیڤێندی ڤۆیسی لابرا   ${newM}`)
+        .setColor("#36393e")
+        .setTimestamp();
+
+      ch.send(embed);
+    }
+  });
+});
+
+bot.on("messageUpdate", (message, newMessage) => {
+  if (message.content === newMessage.content) return;
+  if (
+    !message ||
+    !message.id ||
+    !message.content ||
+    !message.guild ||
+    message.author.bot
+  )
+    return;
+  const channel = message.guild.channels.find("name", "logs");
+  if (!channel) return;
+
+  let embed = new Discord.RichEmbed()
+    .setAuthor(`${message.author.tag}`, message.author.avatarURL)
+    .setTitle(" دەسکاری کردنی مەسج  :  ")
+    .addField("پێش دەسکاری کردن ", `${message.cleanContent}`)
+    .addField(" دوای دەسکاری کردن   ", `${newMessage.cleanContent}`)
+    .addField("  لەچەناڵی  ", `<#${message.channel.id}>`)
+    .addField("  لەلایەن ", `<@${message.author.id}> `)
+    .setColor("#36393e")
+    .setTimestamp();
+  channel.send({ embed: embed });
+});
+
+bot.on("guildMemberAdd", member => {
+  if (!member || !member.id || !member.guild) return;
+  const guild = member.guild;
+
+  const channel = member.guild.channels.find("name", "logs");
+  if (!channel) return;
+  let memberavatar = member.user.avatarURL;
+  const fromNow = bot (member.user.createdTimestamp).fromNow();
+  const isNew = new Date() - member.user.createdTimestamp < 900000 ? "🆕" : "";
+
+  let embed = new Discord.RichEmbed()
+    .setAuthor(`${member.user.tag}`, member.user.avatarURL)
+    .setColor("#36393e")
+    .setDescription(` <@${member.user.id}> هاتە ناو سێرڤەر `)
+    .setTimestamp();
+  channel.send({ embed: embed });
+});
+
+bot.on("guildMemberRemove", member => {
+  if (!member || !member.id || !member.guild) return;
+  const guild = member.guild;
+
+  const channel = member.guild.channels.find("name", "logs");
+  if (!channel) return;
+  let memberavatar = member.user.avatarURL;
+  const fromNow = bot (member.joinedTimestamp).fromNow();
+
+  let embed = new Discord.RichEmbed()
+    .setAuthor(`${member.user.tag}`, member.user.avatarURL)
+    .setColor("#36393e")
+    .setDescription(` <@${member.user.id}>  دەرچو لە سێرڤەر  `)
+    .setTimestamp();
+  channel.send({ embed: embed });
+});
+
+bot.on("messageDelete", message => {
+  if (
+    !message ||
+    !message.id ||
+    !message.content ||
+    !message.guild ||
+    message.author.bot
+  )
+    return;
+  const channel = message.guild.channels.find("name", "logs");
+  if (!channel) return;
+
+  let embed = new Discord.RichEmbed()
+    .setAuthor(`${message.author.tag}`, message.author.avatarURL)
+    .setTitle("سڕینەوەی نامە  :   ")
+    .addField(" نامە  ", `${message.cleanContent}`)
+    .addField("   لە چەناڵی  ", `<#${message.channel.id}>`)
+    .addField("  لەلایەن ", `<@${message.author.id}> `)
+    .setColor("#36393e")
+    .setTimestamp();
+  channel.send({ embed: embed });
+});
+
+bot.on("roleDelete", role => {
+  bot.setTimeout(() => {
+    role.guild
+      .fetchAuditLogs({
+        limit: 1,
+        type: 30
+      })
+      .then(audit => {
+        let exec = audit.entries.map(a => a.executor.username);
+        try {
+          let log = role.guild.channels.find("name", "logs");
+          if (!log) return;
+          let embed = new Discord.RichEmbed()
+            .setColor("#36393e")
+            .setTitle("سڕینەوەی ڕۆڵ ")
+            .addField(" ناوی ڕۆڵی سڕاوە   ", role.name, true)
+            .addField("  ئایدی ڕۆڵ ", role.id, true)
+            .addField(" ڕەنگی ڕۆڵ  ", role.hexColor, true)
+            .addField(" لەلایەن ", exec, true)
+            .setColor("#36393e")
+            .setTimestamp();
+
+          log.send(embed).catch(e => {
+            console.log(e);
+          });
+        } catch (e) {
+          console.log(e);
+        }
+      });
+  }, 1000);
+});
+
+bot.on("roleCreate", role => {
+  bot.setTimeout(() => {
+    role.guild
+      .fetchAuditLogs({
+        limit: 1,
+        type: 30
+      })
+      .then(audit => {
+        let exec = audit.entries.map(a => a.executor.username);
+        try {
+          let log = role.guild.channels.find("name", "logs");
+          if (!log) return;
+          let embed = new Discord.RichEmbed()
+            .setTitle("ڕۆڵ دروست کردن    ")
+            .addField("  ناوی ڕۆڵ  ", role.name, true)
+            .addField("  ئایدی ڕۆڵ ", role.id, true)
+            .addField("  ڕەنگی ڕۆڵ ", role.hexColor, true)
+            .addField(" لەلایەن ", exec, true)
+            .setColor("#36393e")
+            .setTimestamp();
+
+          log.send(embed).catch(e => {
+            console.log(e);
+          });
+        } catch (e) {
+          console.log(e);
+        }
+      });
+  }, 1000);
+});
+
+bot.on("guildBanAdd", (guild, member) => {
+ bot.setTimeout(() => {
+    guild
+      .fetchAuditLogs({
+        limit: 1,
+        type: 22
+      })
+      .then(audit => {
+        let exec = audit.entries.map(a => a.executor.username);
+        try {
+          let log = guild.channels.find("name", "logs");
+          if (!log) return;
+         bot.fetchUser(member.id).then(myUser => {
+            let embed = new Discord.RichEmbed()
+              .setAuthor("باند کراو :  ")
+              .setColor("#36393e")
+              .setThumbnail(myUser.avatarURL)
+              .addField("   ", `**${myUser.username}**`, true)
+              .addField("   ", `**${exec}**`, true)
+              .setFooter(myUser.username, myUser.avatarURL)
+              .setTimestamp();
+            log.send(embed).catch(e => {
+              console.log(e);
+            });
+          });
+        } catch (e) {
+          console.log(e);
+        }
+      });
+  }, 1000);
+});
+
+bot.on("guildBanRemove", (guild, member) => {
+  bot.setTimeout(() => {
+    guild
+      .fetchAuditLogs({
+        limit: 1,
+        type: 22
+      })
+      .then(audit => {
+        let exec = audit.entries.map(a => a.executor.username);
+        try {
+          let log = guild.channels.find("name", "logs");
+          if (!log) return;
+          bot.fetchUser(member.id).then(myUser => {
+            let embed = new Discord.RichEmbed()
+              .setAuthor("     ")
+              .setColor("#36393e")
+              .setThumbnail(myUser.avatarURL)
+              .addField("   ", `**${myUser.username}**`, true)
+              .addField("   ", `**${exec}**`, true)
+              .setFooter(myUser.username, myUser.avatarURL)
+              .setTimestamp();
+            log.send(embed).catch(e => {
+              console.log(e);
+            });
+          });
+        } catch (e) {
+          console.log(e);
+        }
+      });
+  }, 1000);
+});
+
+
+
+
+
+bot.on('message', message => {
+    var prefix = "p!"
+var args = message.content.split(" ").slice(1);    
+if(message.content.startsWith(prefix + 'id')) {
+var year = message.author.createdAt.getFullYear()
+var month = message.author.createdAt.getMonth()
+var day = message.author.createdAt.getDate()
+var men = message.mentions.users.first();  
+let args = message.content.split(' ').slice(1).join(' ');
+if (args == '') {
+var z = message.author;
+}else {
+var z = message.mentions.users.first();
+}
+
+let d = z.createdAt;          
+let n = d.toLocaleString();   
+let x;                       
+let y;                        
+
+if (z.presence.game !== null) {
+y = `${z.presence.game.name}`;
+} else {
+y = "No Playing... |💤.";
+}
+if (z.bot) {
+var w = 'بوت';
+}else {
+var w = 'ئۆنڵاین';
+}
+let embed = new Discord.RichEmbed()
+.setColor("#502faf")
+.addField('🔱| ناو:',`**<@` + `${z.id}` + `>**`, true)
+.addField('🛡| ئایدی:', "**"+ `${z.id}` +"**",true)
+.addField('🥏| جۆری ئۆنڵاین:','**'+y+'**' , true)
+.addField('🤖| جۆری ئەکاونت:',"**"+ w + "**",true)    
+.addField('📛| کۆدی ئەکاونت:',"**#" +  `${z.discriminator}**`,true)
+.addField('**کاتی دروستکردنی ئەکاونت | 📆 **: ' ,year + "-"+ month +"-"+ day)    
+.addField("**کاتی هاتنەناو سێرڤەر| ⌚   :**", message.member.joinedAt.toLocaleString())    
+
+.addField('**⌚ | هەموو کاتی دروستکردنی ئەکاونت :**', message.author.createdAt.toLocaleString())
+.addField("**کۆتا چاتت لێرە | 💬  :**", message.author.lastMessage)            
+
+.setThumbnail(`${z.avatarURL}`)
+.setImage("https://cdn.discordapp.com/attachments/703243461079597138/708070790079184957/image0.gif")
+.setFooter(message.author.username, message.author.avatarURL)
+
+message.channel.send({embed});
+    if (!message) return message.reply('**ضع المينشان بشكل صحيح  ❌ **').catch(console.error);
+
+}
+
+});
+
+
+
+
+
+
 
 
 
