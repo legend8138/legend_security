@@ -32,14 +32,18 @@ bot.on("message", message => {
 🤖 **The prefix for the bot is: ** __p!__ 🤖
 
 
-**|❶|  p!antibots __on__
-|❶ | p!antibots __off__
-++++++++++++++++++++++++++++++++++
-|❷| p!anti ban     [minimum][3 to 4]
-|❷| p!anti kick    [minimum][3 to 4]
-++++++++++++++++++++++++++++++++++
-|❸| p!anti role    [minimum][3 to 4]
-++++++++++++++++++++++++++++++++++
+〔 bot 🔒 〕⇰ 『 p!anti bot on  』
+〔 bot 🔓 〕⇰ 『 p!anti bot off 』
+
+⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡
+
+〔bot 〕⇰ 『 p!anti ban 1 -- 5 』
+〔kick〕⇰ 『 p!anti ban 1 -- 5 』
+
+〔role〕⇰ 『 p!anti role 1 -- 5 』
+
+〔 channel 📛〕⇰『 p!anti ban 1 -- 5 』
+
 |❹| p!anti channel [minimum][3 to 4]
 ++++++++++++++++++++++++++++++++++
 |❺| p!anti time    [minimum][3 to 4]
