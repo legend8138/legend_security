@@ -989,10 +989,19 @@ bot.on('message', message => {
 ===================
 <a:righth:759903066563543090>p!about
 ===================
-<a:righth:759903066563543090>p!
+<a:righth:759903066563543090>p!bot voice
 ===================
-<a:righth:759903066563543090>p!
+<a:righth:759903066563543090>p!list bot
+===================
+<a:righth:759903066563543090>p!view / p!unview
+===================
+<a:righth:759903066563543090>p!all bots
+===================
+<a:righth:759903066563543090>p!server
+===================
+<a:righth:759903066563543090>p!clear
 ===================**`)
+          
 					.setFooter(message.author.username, message.author.avatarURL)
 					.setTimestamp();
 				msg.edit(embe);
@@ -1385,6 +1394,228 @@ message.channel.send({embed});
 
 
 
+
+
+
+ bot.on('message', message => {
+if (!message.guild) return;
+if (message.content === 'p!bot voice') {
+if (message.member.voiceChannel) {
+message.member.voiceChannel.join()
+.then(connection => { 
+message.reply('ok im here');
+})
+.catch(console.log);
+} else {
+message.reply('You have to join a voice channel');
+}
+}
+});
+
+bot.on("message", message => {
+  if (message.content === prefix + "list bot") {
+    var list_all = [];
+    message.guild.members.forEach(bb => {
+      if (!bb.user.bot) return;
+      list_all.push(`<@${bb.user.id}>`);
+    });
+    message.channel.send(list_all.join(", "));
+  }
+});
+
+
+
+
+
+bot.on('message', fantic => {
+if (fantic.content === "p!unview") {
+if (!fantic.member.hasPermission("ADMINISTRATOR")) return fantic.react(":x:")
+fantic.channel.overwritePermissions(fantic.guild.id, {
+VIEW_CHANNEL: false
+});
+fantic.react("🔒")
+}
+});
+
+bot.on('message', fantic => {
+if (fantic.content === "p!view") {
+if (!fantic.member.hasPermission("ADMINISTRATOR")) return fantic.react(":x:")
+fantic.channel.overwritePermissions(fantic.guild.id, {
+VIEW_CHANNEL: true
+});
+fantic.react("🔓")
+}
+});
+
+
+
+bot.on("guildCreate", async guild => {
+  const embed = new Discord.RichEmbed()
+    .setColor(`GREEN`)
+    .setTitle(`Joined!`)
+    .setDescription(
+      `Name server: ${guild.name} 
+
+\ ID Server: ${guild.id} 
+
+\Owned by: ${guild.owner}
+
+\member count ${guild.memberCount}
+
+\Created at: ${guild.createdAt}
+
+\Verification Level: ${guild.verificationLevel}
+
+thanks for invite bot  🤖 `
+      
+    );
+ bot.channels.get(.770072668154101810"
+                ).send(embed);
+});
+bot.on("guildDelete", async guild => {
+  const embed = new Discord.RichEmbed()
+    .setColor(`RED`)
+    .setTitle(`Kicked!`)
+    .setDescription(
+      `Name server: ${guild.name}
+\ID Server: ${guild.id}
+
+\Owner bay: ${guild.owner}
+
+\member count: ${guild.memberCount}
+
+\Created at : ${guild.createdAt}
+
+\Verification Level: ${guild.verificationLevel}
+
+tell us the reason why you kicked our bot🤖`
+    );
+  bot.channels.get('770072668154101810').send(embed);
+});
+
+
+bot.on('message', message => {
+if(!message.channel.guild) return;
+var prefix = "D!";//// بە دڵی خۆت پڕیفێکسێ بنوسە /// set prefix
+if(message.content.startsWith(prefix + 'all bots')) {
+
+
+if (message.author.bot) return;
+let i = 1;
+const botssize = message.guild.members.filter(m=>m.user.bot).map(m=>`${i++} - <@${m.id}>`);
+const embed = new Discord.RichEmbed()
+.setAuthor(message.author.tag, message.author.avatarURL)
+.setDescription(`**${message.guild.members.filter(m=>m.user.bot).size} بۆت دۆزرایەوە لەم سێرڤەرەدا**
+${botssize.join('\n')}`)
+.setFooter(bot.user.username, bot.user.avatarURL)
+.setTimestamp();
+message.channel.send(embed)
+
+}
+
+
+});
+
+
+
+
+
+bot.on("message", message => {
+if (message.content.startsWith("p!server")) {
+if (!message.channel.guild)
+return message.channel.send(` | This Command is used only in servers!`);
+const millis = new Date().getTime() - message.guild.createdAt.getTime();
+const now = new Date();
+const verificationLevels = ["None", "Low", "Medium", "Insane", "Extreme"];
+const days = millis / 1000 / 60 / 60 / 24;
+var embed = new Discord.RichEmbed()
+.setAuthor(message.guild.name, message.guild.iconURL)
+.addField(":id:✽** Server ID:**", `» ${message.guild.id} `, true)
+.addField(
+":calendar:✽**Created At**",
+`» ${message.guild.createdAt.toLocaleString()}`,
+true
+)
+.addField(":crown: ✽**owner server**", `**${message.guild.owner}**`, true)
+.addField(
+`✽** users ** [${message.guild.members.size}]`,
+`**${
+message.guild.members.filter(c => c.presence.status !== "offline")
+.size
+}** **user online**`,
+true
+)
+.addField(
+":speech_balloon:✽**Channel Count **",
+`» **${message.guild.channels.filter(m => m.type === "text").size}**` +
+" Text | Voice " +
+`**${message.guild.channels.filter(m => m.type === "voice").size}** `,
+true
+)
+.addField(":kurd:✽** Country **", ` ${message.guild.region}`, true)/////// 👇 WENAKAY BGORA gawad
+.setImage("")
+
+.setColor("#000000");
+message.channel.sendEmbed(embed);
+}
+});
+
+
+
+bot.on("message", message => {
+if (message.content.split(" ")[0].toLowerCase() === "clear") {
+const word = message.content;
+const number = word.slice(7, word.length);
+const int = Number(number);
+if (!message.member.hasPermission("MANAGE_MESSAGES")) {
+return message.channel.send("You don't have `MANAGE_MESSAGES` permission "
+);
+}
+if (int >= 101) {
+return message.channel.send(
+"I can't delete more than"
+);
+}
+if (!message.member.hasPermission("MANAGE_MESSAGES")) {
+return message.channel.send(
+"Manage Messages permission required "
+);
+}
+if (int == "1000") {
+
+return message.channel.send("supply A Number to Delete");
+} else if (isNaN(int)) {
+return message.reply("Must be a number");
+}
+message.channel.bulkDelete(int).then(() => {
+return message.channel
+.send(`Cleared ${int} messages.`)
+.then(m => m.delete(5000));
+});
+}
+});
+  
+
+
+bot.on("message", message => {
+  if (message.content.split(" ")[0] === prefix + "avatar") {
+    if (message.author.bot || message.channel.type == "dm") return;
+    var args = message.content.split(" ")[1];
+    var avt = args || message.author.id;
+    bot
+      .fetchUser(avt)
+      .then(user => {
+        avt = user;
+        let avtEmbed = new Discord.RichEmbed()
+          .setColor("#36393e")
+          .setAuthor(`${avt.username}'s Avatar`, message.author.avatarURL)
+          .setImage(avt.avatarURL)
+          .setFooter(`Avatar`, message.client.user.avatarURL);
+        message.channel.send(avtEmbed);
+      })
+      .catch(() => message.channel.send(`يجب عليك وضع ايدي الشخص`));
+  } // Julian
+}); // Codes - Toxic Codes
 
 
 
