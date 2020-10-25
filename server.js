@@ -27,33 +27,32 @@ bot.on("ready", () => console.log("🤖Ready Bot In Online🤖"));
 bot.on("message", message => {
   if (message.content === "p!help") {
     const embed = new Discord.RichEmbed().setColor("#000000")
-      .setDescription(`**📝 𝗖𝗼𝗺𝗺𝗻𝗱 𝗛𝗲𝗹𝗽 𝗠𝗲𝗻𝘂**
+      .setDescription(`
+
+**📝 𝗖𝗼𝗺𝗺𝗻𝗱 𝗛𝗲𝗹𝗽 𝗠𝗲𝗻𝘂**
  
-🤖 **The prefix for the bot is: ** __p!__ 🤖
+**🤖 The prefix for the bot is: ⇰ 〔 p! 〕 🤖**
 
 
-〔 bot 🔒 〕⇰ 『 p!anti bot on  』
+〔 **bot 🔒 〕⇰ 『 p!anti bot on  』
+
 〔 bot 🔓 〕⇰ 『 p!anti bot off 』
 
-⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡
+〔bot〕⇰  『 p!anti ban 1 -- 5 』
 
-〔bot 〕⇰ 『 p!anti ban 1 -- 5 』
 〔kick〕⇰ 『 p!anti ban 1 -- 5 』
 
 〔role〕⇰ 『 p!anti role 1 -- 5 』
 
-〔 channel 📛〕⇰『 p!anti ban 1 -- 5 』
+〔channel〕⇰『 p!anti channel 1 -- 5 』
 
-|❹| p!anti channel [minimum][3 to 4]
-++++++++++++++++++++++++++++++++++
-|❺| p!anti time    [minimum][3 to 4]
-++++++++++++++++++++++++++++++++++
-|📝| p!about
-++++++++++++++++++++++++++++++++++
-|✨| p!invite   
-++++++++++++++++++++++++++++++++++
-|✨| p!bot 
-++++++++++++++++++++++++++++++++++**
+〔time〕⇰『 p!anti time  1 -- 5 』
+
+〔 📝 〕⇰『 p!about 』
+
+〔 ✨ 〕⇰『 p!invite   』
+
+〔 ✨ 〕⇰『 p!bot 』**
 
 `)
 .setAuthor(`Max Bot `, bot.user.avatarURL)
@@ -850,6 +849,155 @@ bot.on('message', message => {
 
 });
 
+bot.on('message', message => {
+	if (message.author.bot) return;
+	if (!message.content.startsWith(prefix)) return;
+	 if (message.content === prefix + "dark") {
+		let embed = new Discord.RichEmbed()
+			.setColor('BLACK')
+			.setTitle('Choose From The Reactions :')
+			.setDescription(`
+=====================
+<a:righth:759903066563543090> 🛡️ ->> Secuirty Commands
+=====================
+<a:righth:759903066563543090> <a:dark21:744205765232820225> ->> Admin Commands
+=====================
+<a:righth:759903066563543090> <a:dark22:744205831981236314> ->> Command information
+=====================`);
+		message.channel.send(embed).then(async msg => {
+			msg.react('🛡️');
+			msg.react('⚙');
+			msg.react('🗓');
+			const p1 = msg.createReactionCollector(
+				(reaction, user) =>
+					reaction.emoji.name == '🛡️' && user.id == message.author.id,
+				{ time: 86400000 }
+			);
+			const p2 = msg.createReactionCollector(
+				(reaction, user) =>
+					reaction.emoji.name == '⚙' && user.id == message.author.id,
+				{ time: 86400000 }
+			);
+			const p3 = msg.createReactionCollector(
+				(reaction, user) =>
+					reaction.emoji.name == '🗓' && user.id == message.author.id,
+				{ time: 86400000 }
+			);
+			p1.on('collect', async r => {
+				await r.remove(message.author);
+				let embe = new Discord.RichEmbed()
+					.setColor('white')
+					.setThumbnail(msg.guild.iconURL)
+					.setTitle(`** Name :** **${msg.guild.name}**`)
+			
+					.setDescription(`
+=====================
+
+**<a:dark22:744205831981236314> {Secuirty Commands} <a:dark22:744205831981236314>**
+
+=====================**
+<a:righth:759903066563543090>D!anti kick     3 
+<a:righth:759903066563543090>D!anti ban      3 
+=====================
+<a:righth:759903066563543090>D!anti roleC    3 
+<a:righth:759903066563543090>D!anti roleD    3 
+=====================
+<a:righth:759903066563543090>D!anti channelC   3 
+<a:righth:759903066563543090>D!anti channelD   3 
+=====================
+<a:righth:759903066563543090>D!anti bot on   3 
+<a:righth:759903066563543090>D!anti bot off    3 
+=====================
+<a:righth:759903066563543090>D!set time  0.1 
+=====================
+<a:righth:759903066563543090>D!stats
+=====================
+<a:righth:759903066563543090>D!anti invite**
+=====================
+`)
+					.setFooter(message.author.username, message.author.avatarURL)
+					.setTimestamp();
+				msg.edit(embe);
+			});
+			p2.on('collect', async r => {
+				await r.remove(message.author);
+				let embe = new Discord.RichEmbed()
+					.setColor('White')
+					.setThumbnail(msg.guild.iconURL)
+					.setTitle(`Name :**${msg.guild.name}**`)
+			
+					.setDescription(`
+==================
+
+**<a:dark21:744205765232820225> { ADMIN COMANNDS } <a:dark21:744205765232820225> **
+
+==================
+**
+<a:righth:759903066563543090>D!lock / D!unlock 
+===================
+<a:righth:759903066563543090>D!view / D!unview
+===================
+<a:righth:759903066563543090>D!move all 
+===================
+<a:righth:759903066563543090>D!clear
+===================
+<a:righth:759903066563543090>D!server
+===================
+<a:righth:759903066563543090>D!all bots 
+===================
+<a:righth:759903066563543090>D!report
+===================
+<a:righth:759903066563543090>D!bot voice
+===================
+<a:righth:759903066563543090>D!bot
+===================
+<a:righth:759903066563543090>D!color
+===================
+<a:righth:759903066563543090>!avatar
+===================
+<a:righth:759903066563543090>D!list bot
+===================
+<a:righth:759903066563543090>D!id
+===================
+<a:righth:759903066563543090>Auto @-everyone
+===================**`)
+					.setFooter(message.author.username, message.author.avatarURL)
+					.setTimestamp();
+				msg.edit(embe);
+			});
+			p3.on('collect', async r => {
+				await r.remove(message.author);
+				let embe = new Discord.RichEmbed()
+					.setColor('white')
+					.setThumbnail(msg.guild.iconURL)
+					.setTitle(`Name :**${msg.guild.name}**`)
+			
+					.setDescription(`
+==================
+
+ ** <a:dark22:744205831981236314> { INFO HELP ANTI }** <a:dark22:744205831981236314>
+
+===================
+<a:righth:759903066563543090> **D!help-ban
+===================
+<a:righth:759903066563543090> D!help-kick
+===================
+<a:righth:759903066563543090> D!help-role
+===================
+<a:righth:759903066563543090> D!help-channel
+===================
+<a:righth:759903066563543090> D!help-bot**
+===================
+
+`)
+      
+					.setFooter(message.author.username, message.author.avatarURL)
+					.setTimestamp();
+				msg.edit(embe);
+			});
+		});
+	}
+});
 
 
 /*bot.on("message", message => {
@@ -889,6 +1037,15 @@ return message.channel.send(embed);
     }
  
 })*/
+
+
+
+
+
+
+
+
+
 
 bot.login("NzY3MTkwODgxNjg5MjcyMzMw.X4uULw.5CLp6_kY2chmygROXpfHT2Yrr-I");
 
