@@ -1031,9 +1031,9 @@ bot.on('message', message => {
 ===================
 <a:righth:759903066563543090>**Auto logs channel ( logs )
 ===================
-<a:righth:759903066563543090>
+<a:righth:759903066563543090>Auto  stop @.everyone 
 ===================
-<a:righth:759903066563543090>
+<a:righth:759903066563543090>Auto  stop @.here 
 ===================
 <a:righth:759903066563543090>
 ===================
@@ -1652,7 +1652,95 @@ m.setVoiceChannel(author);
 });
 
 
-  
+bot.on('message', message => { 
+
+ 
+
+if(message.content.includes("@here")){ 
+
+if(!message.member.hasPermission('KICK_MEMBERS')){ 
+
+message.delete(); 
+
+message.reply("🚨 you can mention  🚨") 
+
+} 
+
+ 
+
+} 
+
+ 
+
+});
+
+
+
+bot.on('message', message => { 
+
+ 
+
+if(message.content.includes("@everyone")){ 
+
+if(!message.member.hasPermission('KICK_MEMBERS')){ 
+
+message.delete(); 
+
+message.reply("🚨 you can mention  🚨") 
+
+} 
+
+ 
+
+} 
+
+ 
+
+});
+
+
+
+  bot.on("message", message => {
+  if (message.content === prefix + "stats") {
+    if (!message.member.hasPermission("Ownership"))
+      if (!message.channel.guild) return;
+    if (message.content < 1023) return;
+    const dark = new Discord.RichEmbed()
+      .setAuthor(bot.user.username, bot.user.avatarURL)
+      .setThumbnail(bot.user.avatarURL).setDescription(`AntiBan
+Enabled:🟢 
+Maximum Ban : ${config[message.guild.id].banLimit}
+-
+AntiKick
+Enabled:🟢 
+Maximum Kick : ${config[message.guild.id].kickLimits}
+-
+AntiChannelD
+Enabled:🟢 
+Maximum Delete : ${config[message.guild.id].chaDelLimit}
+-
+AntiChannelC
+Enabled:🟢 
+Maximum Create : ${config[message.guild.id].chaCrLimit}
+-
+AntiRoleD
+Enabled:🟢 
+Maximum Delete : ${config[message.guild.id].roleDelLimit}
+-
+AntiRoleC
+Enabled:🟢 
+Maximum Create : ${config[message.guild.id].roleCrLimits}
+-
+AntiTime
+Enabled:🟢 
+Maximum Time : ${config[message.guild.id].time}
+`);
+
+    message.channel.sendEmbed(dark);
+  }
+});
+
+
   
   
   
