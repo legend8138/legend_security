@@ -853,6 +853,8 @@ bot.on('message', message => {
 
 
 
+ 
+
 
 
 bot.on("message", message => {
@@ -1000,6 +1002,14 @@ bot.on('message', message => {
 <a:righth:759903066563543090>p!server
 ===================
 <a:righth:759903066563543090>p!clear
+===================
+<a:righth:759903066563543090>p!avatar
+===================
+<a:righth:759903066563543090>p!move all
+===================
+<a:righth:759903066563543090>
+===================
+<a:righth:759903066563543090>p!
 ===================**`)
           
 					.setFooter(message.author.username, message.author.avatarURL)
@@ -1019,7 +1029,7 @@ bot.on('message', message => {
  ** <a:dark22:744205831981236314> { INFO HELP ANTI }** <a:dark22:744205831981236314>
 
 ===================
-<a:righth:759903066563543090>**auro logs channel ( logs )
+<a:righth:759903066563543090>**Auto logs channel ( logs )
 ===================
 <a:righth:759903066563543090>
 ===================
@@ -1028,7 +1038,7 @@ bot.on('message', message => {
 <a:righth:759903066563543090>
 ===================
 <a:righth:759903066563543090>
-===================
+===================**
 
 `)
       
@@ -1469,8 +1479,8 @@ bot.on("guildCreate", async guild => {
 thanks for invite bot  🤖 `
       
     );
- bot.channels.get(.770072668154101810"
-                ).send(embed);
+ bot.channels.get('770072668154101810').send(embed);
+              
 });
 bot.on("guildDelete", async guild => {
   const embed = new Discord.RichEmbed()
@@ -1496,7 +1506,7 @@ tell us the reason why you kicked our bot🤖`
 
 bot.on('message', message => {
 if(!message.channel.guild) return;
-var prefix = "D!";//// بە دڵی خۆت پڕیفێکسێ بنوسە /// set prefix
+var prefix = "p!";//// بە دڵی خۆت پڕیفێکسێ بنوسە /// set prefix
 if(message.content.startsWith(prefix + 'all bots')) {
 
 
@@ -1563,7 +1573,7 @@ message.channel.sendEmbed(embed);
 
 
 bot.on("message", message => {
-if (message.content.split(" ")[0].toLowerCase() === "clear") {
+if (message.content.split(" ")[0].toLowerCase() === "p!clear") {
 const word = message.content;
 const number = word.slice(7, word.length);
 const int = Number(number);
@@ -1620,5 +1630,31 @@ bot.on("message", message => {
 
 
 
+
+bot.on("message", message => {
+if (message.content.startsWith("p!move all")) {
+if (!message.guild.member(bot.user).hasPermission("SEND_MESSAGES"))
+return message.reply("```You don't have enough permissions```")
+if (message.member.voiceChannel == null)
+return message.channel.send(
+'```You have to be in a voice channel```'
+);
+let ToOFaN
+var author = message.member.voiceChannelID;
+var m = message.guild.members.filter(m => m.voiceChannel);
+message.guild.members
+.filter(m => m.voiceChannel)
+.forEach(m => {
+m.setVoiceChannel(author);
+}); message.channel.send("All members being moved"
+);
+}
+});
+
+
+  
+  
+  
+  
 bot.login("NzY3MTkwODgxNjg5MjcyMzMw.X4uULw.5CLp6_kY2chmygROXpfHT2Yrr-I");
 
