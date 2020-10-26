@@ -25,7 +25,7 @@ bot.on("ready", () => console.log("🤖Ready Bot In Online🤖"));
 
 
 bot.on("message", message => {
-  if (message.content === "p!help") {
+  if (message.content === "p!dark") {
     const embed = new Discord.RichEmbed().setColor("#000000")
       .setDescription(`
 
@@ -902,7 +902,7 @@ message.reply("**🔓 Unlocked Channel🔓 **");
 bot.on('message', message => {
 	if (message.author.bot) return;
 	if (!message.content.startsWith(prefix)) return;
-	 if (message.content === prefix + "dark") {
+	 if (message.content === prefix + "help") {
 		let embed = new Discord.RichEmbed()
 			.setColor('BLACK')
 			.setTitle('Choose From The Reactions :')
@@ -1006,10 +1006,6 @@ bot.on('message', message => {
 <a:righth:759903066563543090>p!avatar
 ===================
 <a:righth:759903066563543090>p!move all
-===================
-<a:righth:759903066563543090>
-===================
-<a:righth:759903066563543090>p!
 ===================**`)
           
 					.setFooter(message.author.username, message.author.avatarURL)
@@ -1034,10 +1030,6 @@ bot.on('message', message => {
 <a:righth:759903066563543090>Auto  stop @.everyone 
 ===================
 <a:righth:759903066563543090>Auto  stop @.here 
-===================
-<a:righth:759903066563543090>
-===================
-<a:righth:759903066563543090>
 ===================**
 
 `)
