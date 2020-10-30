@@ -1736,5 +1736,5 @@ Maximum Time : ${config[message.guild.id].time}
   
   
   
-bot.login("NzY3MTkwODgxNjg5MjcyMzMw.X4uULw.J8qQyUIVToci8EfhgYz_oWUauFI");
+bot.login("NzY3MTkwODgxNjg5MjcyMzMw.X4uULw.gpOvB2RkLe6j5uw0E1nCBNnEs18");
 
