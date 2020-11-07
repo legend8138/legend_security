@@ -742,7 +742,7 @@ bot.on("message", message => {
       onoff: "On"
     };
     message.channel.send(
-      `You have enabled anti bot!`
+      `You have **enabled** anti bot!`
     );
     fs.writeFile("./antibot.json", JSON.stringify(antibots), err => {
       if (err)
