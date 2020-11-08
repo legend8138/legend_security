@@ -953,7 +953,7 @@ bot.on('message', message => {
 =====================
 <a:righth:759903066563543090>p!anti channel   3 
 =====================
-<a:righth:759903066563543090>panti bot on   3 
+<a:righth:759903066563543090>p!anti bot on   3 
 <a:righth:759903066563543090>p!anti bot off    3 
 =====================
 <a:righth:759903066563543090>p!set time  0.1 
