@@ -76,14 +76,14 @@ const embed = new Discord.RichEmbed().setColor("#000000")
 .setDescription(`
 𝗡𝗮𝗺𝗲
 
-Security#0460
+**Security**
 
 𝗜𝗗
 
-682146815017222150
+**682146815017222150**
 
 𝗢𝘄𝗻𝗲𝗿
-PROFESSOR
+**PROFESSOR**
 
 
 
@@ -122,7 +122,7 @@ function t_c() {
 
 bot.on("ready", () => {
 console.log(
-`Online In Servers : ${bot.guilds.size} | Users : ${bot.users.size}`
+`Online In Servers : ${bot.guilds.size} | Users :${client.users.size}`
 );
 let statuses = [
 ///// لێرانە شتێک بووسە بۆ ستریمینگەکە
