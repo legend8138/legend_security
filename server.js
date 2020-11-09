@@ -122,7 +122,7 @@ function t_c() {
 
 bot.on("ready", () => {
 console.log(
-`Online In Servers : ${bot.guilds.size} | Users :${client.users.size}`
+`Online In Servers : ${bot.guilds.size} | Users :192${bot.users.size}
 );
 let statuses = [
 ///// لێرانە شتێک بووسە بۆ ستریمینگەکە
@@ -829,7 +829,7 @@ bot.on('message', message => {
 
 **Servers**🌐 **__${bot.guilds.size}__**
 
-**Users**  👥 **__${bot.users.size}__**
+**Users**  👥 **__192${bot.users.size}__**
 
 **Channels**📚 **__${bot.channels.size}__**
 
