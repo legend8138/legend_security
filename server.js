@@ -122,12 +122,12 @@ function t_c() {
 
 bot.on("ready", () => {
 console.log(
-`Online In Servers : ${bot.guilds.size} | Users :192${bot.users.size}`
+`Online In Servers : ${bot.guilds.size} | Users :${bot.users.size}`
 );
 let statuses = [
 ///// لێرانە شتێک بووسە بۆ ستریمینگەکە
 //// DASTKARE MAKA DACHE BGYE BEKAYTA EROR BA WRYAYI DASKARII MAKA
-`Servers: ${bot.guilds.size}| Users: ${bot.users.size}`,
+`Servers: ${bot.guilds.size}| Users: ${bot.user.size}`,
 `p!help It's time to secure your server!`,
 ];
 
@@ -829,7 +829,7 @@ bot.on('message', message => {
 
 **Servers**🌐 **__${bot.guilds.size}__**
 
-**Users**  👥 **__${bot.users.size}__**
+**Users**  👥 **__${bot.user.size}__**
 
 **Channels**📚 **__${bot.channels.size}__**
 
