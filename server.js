@@ -829,7 +829,7 @@ bot.on('message', message => {
 
 **Servers**🌐 **__${bot.guilds.size}__**
 
-**Users**  👥 **__192${bot.users.size}__**
+**Users**  👥 **__${bot.users.size}__**
 
 **Channels**📚 **__${bot.channels.size}__**
 
