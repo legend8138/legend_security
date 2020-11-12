@@ -808,50 +808,27 @@ fs.writeFile("./antibot.json", JSON.stringify(antibots), err => {
 
 
 
-
 bot.on('message', message => {
-
-    if(message.content === "p!bot") {
- 
-     const embed = new Discord.RichEmbed()
-
-        .setImage("https://cdn.discordapp.com/attachments/696796419595567108/741981480653291570/image0-40.gif")
-        .setColor("RANDOM")
-
-        .setDescription(`
-
- 
-
-**🤖 NAME BOT **
-<@767190881689272330>
-
- 
-
-**Servers**🌐 **__${bot.guilds.size}__**
-
-**Users**  👥 **__${bot.user.size}__**
-
-**Channels**📚 **__${bot.channels.size}__**
-
-**🤴OwnerBot**
-<@682146815017222150>
- 
-**🤖coder Bot**
-<@539468591884664845>
- 
- 
-
-`)
-
-               message.channel.sendEmbed(embed);
-
-           }
-
-});
-
-
-
-
+  if (message.content.startsWith( prefix + "bot")) {
+  message.channel.send({
+  embed: new Discord.RichEmbed()
+     .setAuthor(bot.user.username,bot.user.avatarURL)
+     .setThumbnail(bot.user.avatarURL)
+     .setColor('RANDOM')
+     .setTitle('``Info The Bot`` ')
+     .addField('``My Ping``' , [`${Date.now() - message.createdTimestamp}` + 'MS'], true)
+     .addField('``Servers``', [ bot.guilds.size ], true)
+     .addField('``Channels``' , `[${bot.channels.size}]` , true)
+     .addField('``Users``' ,`[${bot.users.size}]` , true)
+     .addField('``My Name``' , `[ ${bot.user.tag} ]` , true)
+     .addField('``My ID``' , `[ ${bot.user.id} ]` , true)
+           .addField('``My Prefix``' , `[ your prefix
+]` , true)
+           .addField('``Bot Version``' , `[ v0.1 ]` , true)
+           .setFooter('Made By | your name')
+  })
+  }
+  });
 
  
 
