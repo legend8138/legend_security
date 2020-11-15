@@ -897,7 +897,7 @@ bot.on('message', message => {
 			msg.react('');
 			const p1 = msg.createReactionCollector(
 				(reaction, user) =>
-	reaction.emoji.name ==  && user.id == message.author.id,
+					reaction.emoji.name ==  && user.id == message.author.id,
 				{ time: 86400000 }
 			);
 			const p2 = msg.createReactionCollector(
@@ -1348,16 +1348,16 @@ var w = 'ئۆنڵاین';
 }
 let embed = new Discord.RichEmbed()
 .setColor("#502faf")
-.addField('| ناو:',`**<@` + `${z.id}` + `>**`, true)
+.addField('🔱| ناو:',`**<@` + `${z.id}` + `>**`, true)
 .addField('🛡| ئایدی:', "**"+ `${z.id}` +"**",true)
-.addField('| جۆری ئۆنڵاین:','**'+y+'**' , true)
-.addField('| جۆری ئەکاونت:',"**"+ w + "**",true)    
-.addField('| کۆدی ئەکاونت:',"**#" +  `${z.discriminator}**`,true)
-.addField('**کاتی دروستکردنی ئەکاونت |  **: ' ,year + "-"+ month +"-"+ day)    
-.addField("**کاتی هاتنەناو سێرڤەر|    :**", message.member.joinedAt.toLocaleString())    
+.addField('🥏| جۆری ئۆنڵاین:','**'+y+'**' , true)
+.addField('🤖| جۆری ئەکاونت:',"**"+ w + "**",true)    
+.addField('📛| کۆدی ئەکاونت:',"**#" +  `${z.discriminator}**`,true)
+.addField('**کاتی دروستکردنی ئەکاونت | 📆 **: ' ,year + "-"+ month +"-"+ day)    
+.addField("**کاتی هاتنەناو سێرڤەر| ⌚   :**", message.member.joinedAt.toLocaleString())    
 
-.addField('** | هەموو کاتی دروستکردنی ئەکاونت :**', message.author.createdAt.toLocaleString())
-.addField("**کۆتا چاتت لێرە |   :**", message.author.lastMessage)            
+.addField('**⌚ | هەموو کاتی دروستکردنی ئەکاونت :**', message.author.createdAt.toLocaleString())
+.addField("**کۆتا چاتت لێرە | 💬  :**", message.author.lastMessage)            
 
 .setThumbnail(`${z.avatarURL}`)
 .setImage("https://cdn.discordapp.com/attachments/703243461079597138/708070790079184957/image0.gif")
@@ -1632,7 +1632,7 @@ if(!message.member.hasPermission('KICK_MEMBERS')){
 
 message.delete(); 
 
-message.reply("you can mention  ") 
+message.reply("🚨 you can mention  🚨") 
 
 } 
 
@@ -1656,7 +1656,7 @@ if(!message.member.hasPermission('KICK_MEMBERS')){
 
 message.delete(); 
 
-message.reply("you can mention") 
+message.reply("🚨 you can mention  🚨") 
 
 } 
 
@@ -1678,31 +1678,31 @@ message.reply("you can mention")
     const dark = new Discord.RichEmbed()
       .setAuthor(bot.user.username, bot.user.avatarURL)
       .setThumbnail(bot.user.avatarURL).setDescription(`AntiBan
-Enabled: 
+Enabled:🟢 
 Maximum Ban : ${config[message.guild.id].banLimit}
 -
 AntiKick
-Enabled: 
+Enabled:🟢 
 Maximum Kick : ${config[message.guild.id].kickLimits}
 -
 AntiChannelD
-Enabled: 
+Enabled:🟢 
 Maximum Delete : ${config[message.guild.id].chaDelLimit}
 -
 AntiChannelC
-Enabled:
+Enabled:🟢 
 Maximum Create : ${config[message.guild.id].chaCrLimit}
 -
 AntiRoleD
-Enabled: 
+Enabled:🟢 
 Maximum Delete : ${config[message.guild.id].roleDelLimit}
 -
 AntiRoleC
-Enabled:
+Enabled:🟢 
 Maximum Create : ${config[message.guild.id].roleCrLimits}
 -
 AntiTime
-Enabled:
+Enabled:🟢 
 Maximum Time : ${config[message.guild.id].time}
 `);
 
