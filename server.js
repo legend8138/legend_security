@@ -846,7 +846,7 @@ message.channel
 SEND_MESSAGES: false
 })
 .then(() => {
-message.reply("**locked channel**");
+message.reply("**🔒 locked channel 🔒**");
 });
 }
 
@@ -860,7 +860,7 @@ message.channel
 SEND_MESSAGES: true
 })
 .then(() => {
-message.reply("**Unlocked Channel**")
+message.reply("**🔓 Unlocked Channel🔓 **");
 });
 }
 });
@@ -885,29 +885,29 @@ bot.on('message', message => {
 			.setTitle('Choose From The Reactions :')
 			.setDescription(`
 =====================
-->> Secuirty Commands
+<a:righth:759903066563543090> 🛡️ ->> Secuirty Commands
 =====================
-->> Admin Commands
+<a:righth:759903066563543090> <a:dark21:744205765232820225> ->> Admin Commands
 =====================
-->> Command information
+<a:righth:759903066563543090> <a:dark22:744205831981236314> ->> Command information
 =====================`);
 		message.channel.send(embed).then(async msg => {
-			msg.react('');
-			msg.react('');
-			msg.react('');
+			msg.react('🛡️');
+			msg.react('⚙');
+			msg.react('🗓');
 			const p1 = msg.createReactionCollector(
 				(reaction, user) =>
-					reaction.emoji.name ==  && user.id == message.author.id,
+					reaction.emoji.name == '🛡️' && user.id == message.author.id,
 				{ time: 86400000 }
 			);
 			const p2 = msg.createReactionCollector(
 				(reaction, user) =>
-					reaction.emoji.name == '' && user.id == message.author.id,
+					reaction.emoji.name == '⚙' && user.id == message.author.id,
 				{ time: 86400000 }
 			);
 			const p3 = msg.createReactionCollector(
 				(reaction, user) =>
-					reaction.emoji.name == '' && user.id == message.author.id,
+					reaction.emoji.name == '🗓' && user.id == message.author.id,
 				{ time: 86400000 }
 			);
 			p1.on('collect', async r => {
@@ -920,25 +920,24 @@ bot.on('message', message => {
 					.setDescription(`
 =====================
 
-** {Secuirty Commands}**
+**<a:dark22:744205831981236314> {Secuirty Commands} <a:dark22:744205831981236314>**
 
 =====================**
-p!anti kick     3 
+<a:righth:759903066563543090>p!anti kick     3 
+<a:righth:759903066563543090>p!anti ban      3 
 =====================
-p!anti ban      3 
+<a:righth:759903066563543090>p!anti role   3 
 =====================
-p!anti role   3 
+<a:righth:759903066563543090>p!anti channel   3 
 =====================
-p!anti channel   3 
+<a:righth:759903066563543090>p!anti bot on   3 
+<a:righth:759903066563543090>p!anti bot off    3 
 =====================
-p!anti bot on   3 
-p!anti bot off    3 
+<a:righth:759903066563543090>p!set time  0.1 
 =====================
-p!set time  0.1 
+<a:righth:759903066563543090>p!stats
 =====================
-p!stats
-=====================
-p!invite**
+<a:righth:759903066563543090>p!invite**
 =====================
 `)
 					.setFooter(message.author.username, message.author.avatarURL)
@@ -955,35 +954,35 @@ p!invite**
 					.setDescription(`
 ==================
 
-**{ ADMIN COMANNDS }**
+**<a:dark21:744205765232820225> { ADMIN COMANNDS } <a:dark21:744205765232820225> **
 
 ==================
 **
-p!lock / p!unlok
+<a:righth:759903066563543090>p!lock / p!unlok
 ===================
-p!verify
+<a:righth:759903066563543090>p!verify
 ===================
-p!bot
+<a:righth:759903066563543090>p!bot
 ===================
-p!id
+<a:righth:759903066563543090>p!id
 ===================
-p!about
+<a:righth:759903066563543090>p!about
 ===================
-p!bot voice
+<a:righth:759903066563543090>p!bot voice
 ===================
-p!list bot
+<a:righth:759903066563543090>p!list bot
 ===================
-p!view / p!unview
+<a:righth:759903066563543090>p!view / p!unview
 ===================
-p!all bots
+<a:righth:759903066563543090>p!all bots
 ===================
-p!server
+<a:righth:759903066563543090>p!server
 ===================
-p!clear
+<a:righth:759903066563543090>p!clear
 ===================
-p!avatar
+<a:righth:759903066563543090>p!avatar
 ===================
-p!move all
+<a:righth:759903066563543090>p!move all
 ===================**`)
           
 					.setFooter(message.author.username, message.author.avatarURL)
@@ -1000,14 +999,14 @@ p!move all
 					.setDescription(`
 ==================
 
- ** < { INFO HELP ANTI }** 
+ ** <a:dark22:744205831981236314> { INFO HELP ANTI }** <a:dark22:744205831981236314>
 
 ===================
-Auto logs channel ( logs )
+<a:righth:759903066563543090>**Auto logs channel ( logs )
 ===================
-Auto  stop @.everyone 
+<a:righth:759903066563543090>Auto  stop @.everyone 
 ===================
-auto  stop @.here 
+<a:righth:759903066563543090>Auto  stop @.here 
 ===================**
 
 `)
@@ -1026,13 +1025,13 @@ auto  stop @.here
 bot.on('message', async message => {
 	if (message.content === 'p!verify') {
     let embed = new Discord.RichEmbed()
-    .setDescription('max bot vote !!!  ')
+    .setDescription('max bot vote !!! ✅ ')
     .setColor('RANDOM')
     .setTimestamp()
 		const reactmessage = await message.channel.send(embed);
-		await reactmessage.react('');
+		await reactmessage.react('✅');
 
-		const filter = (reaction, user) => reaction.emoji.name === '' && !user.bot;
+		const filter = (reaction, user) => reaction.emoji.name === '✅' && !user.bot;
 		const collector = reactmessage.createReactionCollector(filter, { time: 15000 });
 
 		collector.on('collect', async reaction => {
