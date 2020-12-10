@@ -893,7 +893,7 @@ bot.on('message', message => {
 		message.channel.send(embed).then(async msg => {
 			msg.react('🛡️');
 			msg.react('⚙');
-			msg.react('🗓');
+			msg.react('📋');
 			const p1 = msg.createReactionCollector(
 				(reaction, user) =>
 					reaction.emoji.name == '🛡️' && user.id == message.author.id,
@@ -906,7 +906,7 @@ bot.on('message', message => {
 			);
 			const p3 = msg.createReactionCollector(
 				(reaction, user) =>
-					reaction.emoji.name == '🗓' && user.id == message.author.id,
+					reaction.emoji.name == '📋' && user.id == message.author.id,
 				{ time: 86400000 }
 			);
 			p1.on('collect', async r => {
@@ -922,21 +922,21 @@ bot.on('message', message => {
 ** {Secuirty Commands} **
 
 =====================**
-p!anti kick     3 
-p!anti ban      3 
+W!anti kick     3 
+W!anti ban      3 
 =====================
-p!anti role   3 
+W!anti role   3 
 =====================
-p!anti channel   3 
+W!anti channel   3 
 =====================
-p!anti bot on   3 
-p!anti bot off    3 
+W!anti bot on   3 
+W!anti bot off    3 
 =====================
-p!set time  0.1 
+W!set time  0.1 
 =====================
-p!stats
+w!stats
 =====================
-p!invite**
+w!invite**
 =====================
 `)
 					.setFooter(message.author.username, message.author.avatarURL)
@@ -957,31 +957,31 @@ p!invite**
 
 ==================
 **
-p!lock / p!unlok
+W!lock / p!unlok
 ===================
-p!verify
+W!verify
 ===================
-p!bot
+W!bot
 ===================
-p!id
+W!id
 ===================
-p!about
+W!about
 ===================
-p!bot voice
+W!bot voice
 ===================
-p!list bot
+W!list bot
 ===================
-p!view / p!unview
+W!view / p!unview
 ===================
-p!all bots
+W!all bots
 ===================
-p!server
+W!server
 ===================
-p!clear
+W!clear
 ===================
-p!avatar
+W!avatar
 ===================
-p!move all
+W!move all
 ===================**`)
           
 					.setFooter(message.author.username, message.author.avatarURL)
@@ -1362,7 +1362,7 @@ let embed = new Discord.RichEmbed()
 .setFooter(message.author.username, message.author.avatarURL)
 
 message.channel.send({embed});
-    if (!message) return message.reply('**ضع المينشان بشكل صحيح  ❌ **').catch(console.error);
+    if (!message) return message.reply('**من **').catch(console.error);
 
 }
 
@@ -1374,10 +1374,9 @@ message.channel.send({embed});
 
 
 
-
  bot.on('message', message => {
 if (!message.guild) return;
-if (message.content === 'p!bot voice') {
+if (message.content === 'W!bot voice') {
 if (message.member.voiceChannel) {
 message.member.voiceChannel.join()
 .then(connection => { 
@@ -1406,7 +1405,7 @@ bot.on("message", message => {
 
 
 bot.on('message', fantic => {
-if (fantic.content === "p!unview") {
+if (fantic.content === "W!unview") {
 if (!fantic.member.hasPermission("ADMINISTRATOR")) return fantic.react(":x:")
 fantic.channel.overwritePermissions(fantic.guild.id, {
 VIEW_CHANNEL: false
@@ -1416,7 +1415,7 @@ fantic.react("🔒")
 });
 
 bot.on('message', fantic => {
-if (fantic.content === "p!view") {
+if (fantic.content === "W!view") {
 if (!fantic.member.hasPermission("ADMINISTRATOR")) return fantic.react(":x:")
 fantic.channel.overwritePermissions(fantic.guild.id, {
 VIEW_CHANNEL: true
@@ -1447,7 +1446,7 @@ bot.on("guildCreate", async guild => {
 thanks for invite bot  🤖 `
       
     );
- bot.channels.get('770072668154101810').send(embed);
+ bot.channels.get('').send(embed);
               
 });
 bot.on("guildDelete", async guild => {
@@ -1499,7 +1498,7 @@ message.channel.send(embed)
 
 
 bot.on("message", message => {
-if (message.content.startsWith("p!server")) {
+if (message.content.startsWith("W!server")) {
 if (!message.channel.guild)
 return message.channel.send(` | This Command is used only in servers!`);
 const millis = new Date().getTime() - message.guild.createdAt.getTime();
@@ -1591,7 +1590,7 @@ bot.on("message", message => {
           .setFooter(`Avatar`, message.client.user.avatarURL);
         message.channel.send(avtEmbed);
       })
-      .catch(() => message.channel.send(`يجب عليك وضع ايدي الشخص`));
+      .catch(() => message.channel.send(`ابيت ايديكه ي داني`));
   } // Julian
 }); // Codes - Toxic Codes
 
@@ -1600,7 +1599,7 @@ bot.on("message", message => {
 
 
 bot.on("message", message => {
-if (message.content.startsWith("p!move all")) {
+if (message.content.startsWith("W!move all")) {
 if (!message.guild.member(bot.user).hasPermission("SEND_MESSAGES"))
 return message.reply("```You don't have enough permissions```")
 if (message.member.voiceChannel == null)
