@@ -17,7 +17,7 @@ const bannedwords = ["@here", "@everyone"];
 
 const ytdl = require("ytdl-core");
 
-const prefix = "z!";
+const prefix = "W!";
 
 const queue = new Map();
 bot.on("ready", () => console.log("🤖Ready Bot In Online🤖"));
@@ -25,7 +25,7 @@ bot.on("ready", () => console.log("🤖Ready Bot In Online🤖"));
 
 
 bot.on("message", message => {
-  if (message.content === "z!zangana") {
+  if (message.content === "....") {
     const embed = new Discord.RichEmbed().setColor("#000000")
       .setDescription(`
 
@@ -70,7 +70,7 @@ bot.on("ready", () => {
 
 
 bot.on("message", message => {
-if (message.content === "z!about") {
+if (message.content === "W!about") {
 const embed = new Discord.RichEmbed().setColor("#000000")
 .setAuthor(message.guild.name, message.guild.iconURL)
 .setDescription(`
@@ -80,10 +80,10 @@ const embed = new Discord.RichEmbed().setColor("#000000")
 
 𝗜𝗗
 
-**639145405476503552**
+**<@764507393543241788>**
 
 𝗢𝘄𝗻𝗲𝗿
-**ZANGANA**
+**WinTer**
 
 
 
@@ -99,7 +99,7 @@ bot.on("ready", () => {
   console.log(`[!]-------------------------------------[!]`);
   console.log(`Display Name : ${bot.user.username}`);
   console.log(`Public Prefix : ${prefix}`);
-  console.log(`Version : 0.0.1`);
+  console.log(`Version : v.1`);
   console.log(`[!]-------------------------------------[!]`);
 });
 
@@ -126,8 +126,8 @@ console.log(
 );
 let statuses = [
 
-`z!help | server security is here`,
-`z!help | server security is here`,
+`W!help | server security is here`,
+`WITH ME HARD HACKED YOUR SERVER`,
 ];
 
   setInterval(function() {
@@ -640,7 +640,7 @@ bot.on("guildKickAdd", async (guild, user) => {
         e
       ) {
         if (e) throw e;
-      });
+      }); 
       fs.writeFile("./antigreff.json", JSON.stringify(anti, null, 2), function(
         e
       ) {
@@ -789,7 +789,7 @@ fs.writeFile("./antibot.json", JSON.stringify(antibots), err => {
 
 
   bot.on("message", message => {
-  if (message.content === "p!invite") {
+  if (message.content === "W!invite") {
     if (!message.channel.guild)
       return message.reply(
         "Please Do not type bot commands in bot private chat"
@@ -821,10 +821,10 @@ bot.on('message', message => {
      .addField('``Users``' ,`[${bot.users.size}]` , true)
      .addField('``My Name``' , `[ ${bot.user.tag} ]` , true)
      .addField('``My ID``' , `[ ${bot.user.id} ]` , true)
-           .addField('``My Prefix``' , `[ your prefix
+           .addField('``My Prefix``' , `[ W!
 ]` , true)
-           .addField('``Bot Version``' , `[ v0.1 ]` , true)
-           .setFooter('Made By | your name')
+           .addField('``Bot Version``' , `[ v.1 ]` , true)
+           .setFooter('Made By | Win Ter')
   })
   }
   });
@@ -835,7 +835,7 @@ bot.on('message', message => {
 
 bot.on("message", message => {
 let ToOFaN
-if (message.content === "p!lock") {
+if (message.content === "W!lock") {
 if (!message.channel.guild)
 return message.reply("This command is only for servers");
 if (!message.member.hasPermission("MANAGE_MESSAGES"))
@@ -849,7 +849,7 @@ message.reply("**🔒 locked channel 🔒**");
 });
 }
 
-if (message.content === "p!unlock") {
+if (message.content === "W!unlock") {
 if (!message.channel.guild)
 return message.reply("** This command is only for servers**");
 if (!message.member.hasPermission("MANAGE_MESSAGES"))
@@ -1022,9 +1022,9 @@ Auto  stop @.here
 
 
 bot.on('message', async message => {
-	if (message.content === 'p!verify') {
+	if (message.content === 'W!verify') {
     let embed = new Discord.RichEmbed()
-    .setDescription('max bot vote !!! ✅ ')
+    .setDescription('NooB bot vote !!! ✅ ')
     .setColor('RANDOM')
     .setTimestamp()
 		const reactmessage = await message.channel.send(embed);
@@ -1315,7 +1315,7 @@ bot.on("guildBanRemove", (guild, member) => {
 
 
 bot.on('message', message => {
-    var prefix = "p!"
+    var prefix = "W!"
 var args = message.content.split(" ").slice(1);    
 if(message.content.startsWith(prefix + 'id')) {
 var year = message.author.createdAt.getFullYear()
@@ -1362,7 +1362,7 @@ let embed = new Discord.RichEmbed()
 .setFooter(message.author.username, message.author.avatarURL)
 
 message.channel.send({embed});
-    if (!message) return message.reply('**من **').catch(console.error);
+    if (!message) return message.reply('**منشنه كه به جواني داني **').catch(console.error);
 
 }
 
@@ -1711,5 +1711,5 @@ Maximum Time : ${config[message.guild.id].time}
   
   
   
-bot.login("Nzc3ODU4NTk2MTEyMzAyMDgw.X7JjRQ.ZdmFY2dJ7-KeKpOWn839bDoBtCA");
+bot.login("Nzc3ODE5MTA4NDQ0MDc4MDgx.X7I-fg.I1IV47Ymym7W3ADC6cc7ULM9S24");
 
