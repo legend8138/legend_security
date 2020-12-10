@@ -55,8 +55,8 @@ bot.on("message", message => {
 〔 ✨ 〕⇰『 p!bot 』**
 
 `)
-.setAuthor(`Max Bot `, bot.user.avatarURL)
-.setFooter(`max bot | Coded by Emir Bolat, by ᵏᵃᵏ PrOfEsSoR🇨🇳.`, bot.user.avatarURL)
+.setAuthor(`zangana `, bot.user.avatarURL)
+.setFooter(`zangana | Coded by Emir Bolat, by ᵏᵃᵏ zangana🇨🇳.`, bot.user.avatarURL)
 return message.channel.send(embed);
      
     message.channel.sendEmbed(embed);
@@ -80,10 +80,10 @@ const embed = new Discord.RichEmbed().setColor("#000000")
 
 𝗜𝗗
 
-**682146815017222150**
+**639145405476503552**
 
 𝗢𝘄𝗻𝗲𝗿
-**PROFESSOR**
+**ZANGANA**
 
 
 
@@ -1713,5 +1713,5 @@ Maximum Time : ${config[message.guild.id].time}
   
   
   
-bot.login("");
+bot.login("Nzc3ODU4NTk2MTEyMzAyMDgw.X7JjRQ.ZdmFY2dJ7-KeKpOWn839bDoBtCA");
 
