@@ -17,7 +17,7 @@ const bannedwords = ["@here", "@everyone"];
 
 const ytdl = require("ytdl-core");
 
-const prefix = "p!";
+const prefix = "z!";
 
 const queue = new Map();
 bot.on("ready", () => console.log("🤖Ready Bot In Online🤖"));
@@ -25,7 +25,7 @@ bot.on("ready", () => console.log("🤖Ready Bot In Online🤖"));
 
 
 bot.on("message", message => {
-  if (message.content === "p!dark") {
+  if (message.content === "z!zangana") {
     const embed = new Discord.RichEmbed().setColor("#000000")
       .setDescription(`
 
@@ -70,7 +70,7 @@ bot.on("ready", () => {
 
 
 bot.on("message", message => {
-if (message.content === "p!about") {
+if (message.content === "z!about") {
 const embed = new Discord.RichEmbed().setColor("#000000")
 .setAuthor(message.guild.name, message.guild.iconURL)
 .setDescription(`
@@ -122,13 +122,12 @@ function t_c() {
 
 bot.on("ready", () => {
 console.log(
-`Online In Servers : ${bot.guilds.size} | Users: ${bot.users.size} `,
+`z!help | server security is here `,
 );
 let statuses = [
-///// لێرانە شتێک بووسە بۆ ستریمینگەکە
-//// DASTKARE MAKA DACHE BGYE BEKAYTA EROR BA WRYAYI DASKARII MAKA
-`Servers: ${bot.guilds.size}| Users: ${bot.user.size}`,
-`p!help It's time to secure your server!`,
+
+`z!help | server security is here`,
+`z!help | server security is here`,
 ];
 
   setInterval(function() {
