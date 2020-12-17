@@ -788,14 +788,14 @@ fs.writeFile("./antibot.json", JSON.stringify(antibots), err => {
 
 
   bot.on("message", message => {
-  if (message.content === "W!invite") {
+  if (message.content === "z!invite") {
     if (!message.channel.guild)
       return message.reply(
         "Please Do not type bot commands in bot private chat"
       );
     let embed = new Discord.RichEmbed()
-      .setColor("GREEN")
-      .setTitle("=--> click touch for link bot <--=")
+      .setColor("05FFEE")
+      .setTitle("=--> click Here To add Bot in Your Server ✨ <--=")
       .setURL(
         "https://discord.com/api/oauth2/authorize?client_id=767190881689272330&permissions=8&scope=bot"
       ) // Type Your Link here after ''
