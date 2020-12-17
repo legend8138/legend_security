@@ -69,8 +69,8 @@ bot.on("ready", () => {
 
 
 bot.on("message", message => {
-if (message.content === "W!about") {
-const embed = new Discord.RichEmbed().setColor("#000000")
+if (message.content === "z!about") {
+const embed = new Discord.RichEmbed().setColor("05FFEE")
 .setAuthor(message.guild.name, message.guild.iconURL)
 .setDescription(`
 𝗡𝗮𝗺𝗲
@@ -79,10 +79,10 @@ const embed = new Discord.RichEmbed().setColor("#000000")
 
 𝗜𝗗
 
-**<@764507393543241788>**
+**<@639145405476503552>**
 
 𝗢𝘄𝗻𝗲𝗿
-**WinTer**
+**! ZANGANA | Kᴜʀᴅɪsʜ Sᴇᴄᴜʀɪᴛʏ**
 
 
 
@@ -121,12 +121,12 @@ function t_c() {
 
 bot.on("ready", () => {
 console.log(
-`z!help | server security is here `,
+`z!help | | Kurdish Security Staff`,
 );
 let statuses = [
 
-`W!help | server security is here`,
-`WITH ME HARD HACKED YOUR SERVER`,
+`z!help | | Kurdish Security Staff `,
+`z!help | | Kurdish Security Staff `,
 ];
 
   setInterval(function() {
