@@ -17,7 +17,7 @@ const bannedwords = ["@here", "@everyone"];
 
 const ytdl = require("ytdl-core");
 
-const prefix = "W!";
+const prefix = "z!";
 
 const queue = new Map();
 bot.on("ready", () => console.log("🤖Ready Bot In Online🤖"));
@@ -26,30 +26,29 @@ bot.on("ready", () => console.log("🤖Ready Bot In Online🤖"));
 
 bot.on("message", message => {
   if (message.content === "....") {
-    const embed = new Discord.RichEmbed().setColor("#000000")
+    const embed = new Discord.RichEmbed().setColor("05FFEE")
       .setDescription(`
 
 **📝 𝗖𝗼𝗺𝗺𝗻𝗱 𝗛𝗲𝗹𝗽 𝗠𝗲𝗻𝘂**
  
-**🤖 The prefix for the bot is: ⇰ 〔 p! 〕 🤖**
+**🤖 The prefix for the bot is: ⇰ 〔 z! 〕 🤖**
 
 
-〔 **bot 🔒 〕⇰ 『 p!anti bot on  』
+〔 **bot 🔒 〕⇰ 『 z!anti bot on  』
 
-〔 bot 🔓 〕⇰ 『 p!anti bot off 』
+〔 bot 🔓 〕⇰ 『 z!anti bot off 』
 
-〔bot〕⇰  『 p!anti ban 1 -- 5 』
+〔bot〕⇰  『 z!anti ban 1 -- 5 』
 
-〔kick〕⇰ 『 p!anti ban 1 -- 5 』
+〔kick〕⇰ 『 z!anti ban 1 -- 5 』
 
-〔role〕⇰ 『 p!anti role 1 -- 5 』
+〔role〕⇰ 『 z!anti role 1 -- 5 』
 
-〔channel〕⇰『 p!anti channel 1 -- 5 』
+〔channel〕⇰『 !anti channel 1 -- 5 』
 
-〔time〕⇰『 p!anti time  1 -- 5 』
+〔time〕⇰『 z!anti time  1 -- 5 』
 
-〔 📝 〕⇰『 p!about 』
-
+〔 📝 〕⇰『 p
 〔 ✨ 〕⇰『 p!invite   』
 
 〔 ✨ 〕⇰『 p!bot 』**
