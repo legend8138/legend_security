@@ -131,12 +131,12 @@ let statuses = [
 
   setInterval(function() {
 let dnd = statuses[Math.floor(Math.random() * statuses.length)];
-bot.user.setStatus("");
+bot.user.setStatus("WATCHING");
 bot.user.setActivity(dnd, {
 
   
   
-type:"", 
+type:"WATCHING", 
 url: "https://www.twitch.tv/faith"
 });
 }, 2000);
@@ -797,7 +797,7 @@ fs.writeFile("./antibot.json", JSON.stringify(antibots), err => {
       .setColor("05FFEE")
       .setTitle("=--> click Here To add Bot in Your Server ✨ <--=")
       .setURL(
-        "https://discord.com/api/oauth2/authorize?client_id=767190881689272330&permissions=8&scope=bot"
+        "https://discord.com/api/oauth2/authorize?client_id=758206575621570583&permissions=8&scope=bot"
       ) // Type Your Link here after ''
       .setFooter("", message.author.avatarURL);
     message.channel.sendEmbed(embed);
@@ -820,10 +820,10 @@ bot.on('message', message => {
      .addField('``Users``' ,`[${bot.users.size}]` , true)
      .addField('``My Name``' , `[ ${bot.user.tag} ]` , true)
      .addField('``My ID``' , `[ ${bot.user.id} ]` , true)
-           .addField('``My Prefix``' , `[ W!
+           .addField('``My Prefix``' , `[ z!
 ]` , true)
            .addField('``Bot Version``' , `[ v.1 ]` , true)
-           .setFooter('Made By | Win Ter')
+           .setFooter('Made By | Zangana')
   })
   }
   });
@@ -834,7 +834,7 @@ bot.on('message', message => {
 
 bot.on("message", message => {
 let ToOFaN
-if (message.content === "W!lock") {
+if (message.content === "z!lock") {
 if (!message.channel.guild)
 return message.reply("This command is only for servers");
 if (!message.member.hasPermission("MANAGE_MESSAGES"))
@@ -848,7 +848,7 @@ message.reply("**🔒 locked channel 🔒**");
 });
 }
 
-if (message.content === "W!unlock") {
+if (message.content === "z!unlock") {
 if (!message.channel.guild)
 return message.reply("** This command is only for servers**");
 if (!message.member.hasPermission("MANAGE_MESSAGES"))
@@ -1375,7 +1375,7 @@ message.channel.send({embed});
 
  bot.on('message', message => {
 if (!message.guild) return;
-if (message.content === 'W!bot voice') {
+if (message.content === 'z!bot voice') {
 if (message.member.voiceChannel) {
 message.member.voiceChannel.join()
 .then(connection => { 
@@ -1404,7 +1404,7 @@ bot.on("message", message => {
 
 
 bot.on('message', fantic => {
-if (fantic.content === "W!unview") {
+if (fantic.content === "z!unview") {
 if (!fantic.member.hasPermission("ADMINISTRATOR")) return fantic.react(":x:")
 fantic.channel.overwritePermissions(fantic.guild.id, {
 VIEW_CHANNEL: false
@@ -1414,7 +1414,7 @@ fantic.react("🔒")
 });
 
 bot.on('message', fantic => {
-if (fantic.content === "W!view") {
+if (fantic.content === "z!view") {
 if (!fantic.member.hasPermission("ADMINISTRATOR")) return fantic.react(":x:")
 fantic.channel.overwritePermissions(fantic.guild.id, {
 VIEW_CHANNEL: true
@@ -1445,12 +1445,12 @@ bot.on("guildCreate", async guild => {
 thanks for invite bot  🤖 `
       
     );
- bot.channels.get('').send(embed);
+ bot.channels.get('788752379813953537').send(embed);
               
 });
 bot.on("guildDelete", async guild => {
   const embed = new Discord.RichEmbed()
-    .setColor(`RED`)
+    .setColor(`05FFEE`)
     .setTitle(`Kicked!`)
     .setDescription(
       `Name server: ${guild.name}
@@ -1466,13 +1466,13 @@ bot.on("guildDelete", async guild => {
 
 tell us the reason why you kicked our bot🤖`
     );
-  bot.channels.get('770072668154101810').send(embed);
+  bot.channels.get('788752379813953537').send(embed);
 });
 
 
 bot.on('message', message => {
 if(!message.channel.guild) return;
-var prefix = "p!";//// بە دڵی خۆت پڕیفێکسێ بنوسە /// set prefix
+var prefix = "z!";//// بە دڵی خۆت پڕیفێکسێ بنوسە /// set prefix
 if(message.content.startsWith(prefix + 'all bots')) {
 
 
@@ -1497,7 +1497,7 @@ message.channel.send(embed)
 
 
 bot.on("message", message => {
-if (message.content.startsWith("W!server")) {
+if (message.content.startsWith("z!server")) {
 if (!message.channel.guild)
 return message.channel.send(` | This Command is used only in servers!`);
 const millis = new Date().getTime() - message.guild.createdAt.getTime();
@@ -1531,7 +1531,7 @@ true
 .addField(":kurd:✽** Country **", ` ${message.guild.region}`, true)/////// 👇 WENAKAY BGORA gawad
 .setImage("")
 
-.setColor("#000000");
+.setColor("05FFEE");
 message.channel.sendEmbed(embed);
 }
 });
@@ -1539,7 +1539,7 @@ message.channel.sendEmbed(embed);
 
 
 bot.on("message", message => {
-if (message.content.split(" ")[0].toLowerCase() === "p!clear") {
+if (message.content.split(" ")[0].toLowerCase() === "z!clear") {
 const word = message.content;
 const number = word.slice(7, word.length);
 const int = Number(number);
@@ -1583,7 +1583,7 @@ bot.on("message", message => {
       .then(user => {
         avt = user;
         let avtEmbed = new Discord.RichEmbed()
-          .setColor("#36393e")
+          .setColor("05FFEE")
           .setAuthor(`${avt.username}'s Avatar`, message.author.avatarURL)
           .setImage(avt.avatarURL)
           .setFooter(`Avatar`, message.client.user.avatarURL);
@@ -1598,7 +1598,7 @@ bot.on("message", message => {
 
 
 bot.on("message", message => {
-if (message.content.startsWith("W!move all")) {
+if (message.content.startsWith("z!move all")) {
 if (!message.guild.member(bot.user).hasPermission("SEND_MESSAGES"))
 return message.reply("```You don't have enough permissions```")
 if (message.member.voiceChannel == null)
@@ -1710,5 +1710,5 @@ Maximum Time : ${config[message.guild.id].time}
   
   
   
-bot.login("");
+bot.login("NzU4MjA2NTc1NjIxNTcwNTgz.X2rk5g.0bsFhGCzX3tH6WXbbOFS8yY3C8E");
 
