@@ -730,13 +730,11 @@ bot.on("guildMemberRemove", async member => {
     });
   }
 });
-//=========={Anit-Bot}========//
-
-let antibots = JSON.parse(fs.readFileSync("./antibot.json", "utf8")); //require antihack.json file
+//=========={Anit-Bot}========//let antibots = JSON.parse(fs.readFileSync("./antibot.json", "utf8")); //require antihack.json file
 bot.on("message", message => {
   if (message.content.startsWith(prefix + "antibots on")) {
     if (!message.member.hasPermission("Ownership")) return message.reply(":");
-    antibots[message.guild.id] = {
+      antibots[message.guild.id] = {
       onoff: "On"
     };
     message.channel.send(
